@@ -61,12 +61,12 @@ public class FunctionalBlocksGroup {
             entries.add(WHITE_OAK.hanging_sign);
             entries.add(CHARRED.hanging_sign);
             entries.add(RAW_BAMBOO.hanging_sign);
-            entries.add(BlockusEntities.WHITE_OAK_BOAT.getItem());
-            entries.add(BlockusEntities.CHARRED_BOAT.getItem());
-            entries.add(BlockusEntities.RAW_BAMBOO_RAFT.getItem());
-            entries.add(BlockusEntities.WHITE_OAK_BOAT.getChestItem());
-            entries.add(BlockusEntities.CHARRED_BOAT.getChestItem());
-            entries.add(BlockusEntities.RAW_BAMBOO_RAFT.getChestItem());
+//            entries.add(BlockusEntities.WHITE_OAK_BOAT.getItem());
+//            entries.add(BlockusEntities.CHARRED_BOAT.getItem());
+//            entries.add(BlockusEntities.RAW_BAMBOO_RAFT.getItem());
+//            entries.add(BlockusEntities.WHITE_OAK_BOAT.getChestItem());
+//            entries.add(BlockusEntities.CHARRED_BOAT.getChestItem());
+//            entries.add(BlockusEntities.RAW_BAMBOO_RAFT.getChestItem());
         });
     }
 

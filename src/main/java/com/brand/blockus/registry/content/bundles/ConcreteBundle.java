@@ -22,13 +22,13 @@ public class ConcreteBundle {
 
         this.base = base;
 
-        this.block = BlockFactory.register(type, new Block(AbstractBlock.Settings.copy(base)));
+        this.block = BlockFactory.register(type, BlockFactory.createCopy(base));
         this.slab = BlockFactory.registerSlab(this.block);
         this.stairs = BlockFactory.registerStairs(this.block);
         this.wall = BlockFactory.registerWall(this.block);
         String replace = type.replace("_bricks", "");
-        this.chiseled = BlockFactory.register("chiseled_" + replace, new Block(AbstractBlock.Settings.copy(base)));
-        this.pillar = BlockFactory.register(replace + "_pillar", new PillarBlock(AbstractBlock.Settings.copy(base)));
+        this.chiseled = BlockFactory.register("chiseled_" + replace, BlockFactory.createCopy(base));
+        this.pillar = BlockFactory.registerPillar(replace + "_pillar", base);
 
         LIST.add(this);
     }

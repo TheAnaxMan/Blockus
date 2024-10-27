@@ -19,7 +19,7 @@ public class ColoredTilesBundle {
 
         String type = getColor(tile1) + "_" + getColor(tile2) + "_colored_tiles";
 
-        this.block = BlockFactory.register(type, new ColoredTilesBlock(tile1, tile2, AbstractBlock.Settings.copy(tile2)));
+        this.block = BlockFactory.register(type, (settings) -> new ColoredTilesBlock(tile1, tile2, settings), BlockFactory.createCopy(tile2));
         this.tile1 = tile1;
         this.tile2 = tile2;
 

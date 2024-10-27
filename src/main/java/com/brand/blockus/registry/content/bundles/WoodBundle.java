@@ -3,13 +3,14 @@ package com.brand.blockus.registry.content.bundles;
 import com.brand.blockus.Blockus;
 import com.brand.blockus.registry.content.BlockusItems;
 import com.brand.blockus.utils.BlockFactory;
-import com.terraformersmc.terraform.sign.api.block.TerraformHangingSignBlock;
-import com.terraformersmc.terraform.sign.api.block.TerraformSignBlock;
-import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock;
-import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
+//import com.terraformersmc.terraform.sign.api.block.TerraformHangingSignBlock;
+//import com.terraformersmc.terraform.sign.api.block.TerraformSignBlock;
+//import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock;
+//import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.Item;
+import net.minecraft.item.SignItem;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
@@ -54,27 +55,35 @@ public class WoodBundle {
             hangingSignSettings = hangingSignSettings.burnable();
         }
 
-        this.planks = BlockFactory.register(type + "_planks", new Block(blockSettings));
+        this.planks = BlockFactory.register(type + "_planks", blockSettings);
         this.stairs = BlockFactory.registerStairs(this.planks);
         this.slab = BlockFactory.registerSlab(this.planks);
-        this.fence = BlockFactory.register(type + "_fence", new FenceBlock(AbstractBlock.Settings.copy(base)));
-        this.fence_gate = BlockFactory.register(type + "_fence_gate", new FenceGateBlock(woodtype, AbstractBlock.Settings.copy(base)));
-        this.door = BlockFactory.register(type + "_door", new DoorBlock(blocksettype, blockSettings2));
-        this.trapdoor = BlockFactory.register(type + "_trapdoor", new TrapdoorBlock(blocksettype, blockSettings2));
+        this.fence = BlockFactory.register(type + "_fence", FenceBlock::new, BlockFactory.createCopy(base));
+        this.fence_gate = BlockFactory.register(type + "_fence_gate", (settings) -> new FenceGateBlock(woodtype, settings), BlockFactory.createCopy(base));
+        this.door = BlockFactory.register(type + "_door", (settings) -> new DoorBlock(blocksettype, settings), blockSettings2);
+        this.trapdoor = BlockFactory.register(type + "_trapdoor", (settings) -> new TrapdoorBlock(blocksettype, settings), blockSettings2);
         this.pressure_plate = BlockFactory.registerWoodenPressurePlate(this.planks);
-        this.button = BlockFactory.register(type + "_button", new ButtonBlock(blocksettype, 30, AbstractBlock.Settings.copy(planks).noCollision()));
+        this.button = BlockFactory.register(type + "_button", (settings) -> new ButtonBlock(blocksettype, 30, settings), AbstractBlock.Settings.copy(planks).noCollision());
 
         // sign
-        Identifier signPath = Blockus.id("entity/signs/" + type);
-        this.standing_sign = BlockFactory.registerNoItem(type + "_sign", new TerraformSignBlock(signPath, signSettings));
-        this.wall_sign = BlockFactory.registerNoItem(type + "_wall_sign", new TerraformWallSignBlock(signPath, copyLootTable(standing_sign).mapColor(color).noCollision().strength(1.0F).sounds(sound)));
-        this.sign = BlockusItems.registerSign(standing_sign, wall_sign);
+//        Identifier signPath = Blockus.id("entity/signs/" + type);
+//        this.standing_sign = BlockFactory.registerNoItem(type + "_sign", new TerraformSignBlock(signPath, signSettings));
+//        this.wall_sign = BlockFactory.registerNoItem(type + "_wall_sign", new TerraformWallSignBlock(signPath, copyLootTable(standing_sign).mapColor(color).noCollision().strength(1.0F).sounds(sound)));
+//        this.sign = BlockusItems.registerSign(standing_sign, wall_sign);
+//
+//        Identifier hangingSignPath = Blockus.id("entity/signs/hanging/" + type);
+//        Identifier hangingSignGuiPath = Blockus.id("textures/gui/hanging_signs/" + type);
+//        this.ceiling_hanging_sign = BlockFactory.registerNoItem(type + "_hanging_sign", new TerraformHangingSignBlock(hangingSignPath, hangingSignGuiPath, signSettings));
+//        this.wall_hanging_sign = BlockFactory.registerNoItem(type + "_wall_hanging_sign", new TerraformWallHangingSignBlock(hangingSignPath, hangingSignGuiPath, copyLootTable(ceiling_hanging_sign).mapColor(color).noCollision().strength(1.0F).sounds(sound)));
+//        this.hanging_sign = BlockusItems.registerHangingSign(ceiling_hanging_sign, wall_hanging_sign);
 
-        Identifier hangingSignPath = Blockus.id("entity/signs/hanging/" + type);
-        Identifier hangingSignGuiPath = Blockus.id("textures/gui/hanging_signs/" + type);
-        this.ceiling_hanging_sign = BlockFactory.registerNoItem(type + "_hanging_sign", new TerraformHangingSignBlock(hangingSignPath, hangingSignGuiPath, signSettings));
-        this.wall_hanging_sign = BlockFactory.registerNoItem(type + "_wall_hanging_sign", new TerraformWallHangingSignBlock(hangingSignPath, hangingSignGuiPath, copyLootTable(ceiling_hanging_sign).mapColor(color).noCollision().strength(1.0F).sounds(sound)));
-        this.hanging_sign = BlockusItems.registerHangingSign(ceiling_hanging_sign, wall_hanging_sign);
+        this.standing_sign = BlockFactory.register(type + "_sign_temp", blockSettings);
+        this.wall_sign = BlockFactory.register(type + "_wall_sign_temp", blockSettings);
+        this.sign = BlockusItems.register(this.standing_sign, (block, settings) -> new SignItem(block, this.wall_sign, settings), (new Item.Settings()).maxCount(16));
+        this.ceiling_hanging_sign = BlockFactory.register(type + "hanging_sign_temp", blockSettings);
+        this.wall_hanging_sign = BlockFactory.register(type + "_wall_hanging_sign_temp", blockSettings);
+        this.hanging_sign = BlockusItems.register(this.ceiling_hanging_sign, (block, settings) -> new SignItem(block, this.wall_hanging_sign, settings), (new Item.Settings()).maxCount(16));
+
 
         LIST.add(this);
 

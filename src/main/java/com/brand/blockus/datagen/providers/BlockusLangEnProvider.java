@@ -184,14 +184,14 @@ public class BlockusLangEnProvider extends FabricLanguageProvider {
         translationBuilder.add(BlockusBlocks.STRIPPED_WHITE_OAK_WOOD, "Stripped White Oak Wood");
         translationBuilder.add(BlockusBlocks.WHITE_OAK_LEAVES, "White Oak Leaves");
         addWoodBundle(translationBuilder, BlockusBlocks.WHITE_OAK, "White Oak Planks");
-        translationBuilder.add(BlockusEntities.WHITE_OAK_BOAT.getItem(), "White Oak Boat");
-        translationBuilder.add(BlockusEntities.WHITE_OAK_BOAT.getChestItem(), "White Oak Boat with Chest");
+//        translationBuilder.add(BlockusEntities.WHITE_OAK_BOAT.getItem(), "White Oak Boat");
+//        translationBuilder.add(BlockusEntities.WHITE_OAK_BOAT.getChestItem(), "White Oak Boat with Chest");
         addWoodBundle(translationBuilder, BlockusBlocks.RAW_BAMBOO, "Raw Bamboo Planks");
-        translationBuilder.add(BlockusEntities.RAW_BAMBOO_RAFT.getItem(), "Raw Bamboo Raft");
-        translationBuilder.add(BlockusEntities.RAW_BAMBOO_RAFT.getChestItem(), "Raw Bamboo Raft with Chest");
+//        translationBuilder.add(BlockusEntities.RAW_BAMBOO_RAFT.getItem(), "Raw Bamboo Raft");
+//        translationBuilder.add(BlockusEntities.RAW_BAMBOO_RAFT.getChestItem(), "Raw Bamboo Raft with Chest");
         addWoodBundle(translationBuilder, BlockusBlocks.CHARRED, "Charred Planks");
-        translationBuilder.add(BlockusEntities.CHARRED_BOAT.getItem(), "Charred Boat");
-        translationBuilder.add(BlockusEntities.CHARRED_BOAT.getChestItem(), "Charred Boat with Chest");
+//        translationBuilder.add(BlockusEntities.CHARRED_BOAT.getItem(), "Charred Boat");
+//        translationBuilder.add(BlockusEntities.CHARRED_BOAT.getChestItem(), "Charred Boat with Chest");
 
         // Small logs
         translationBuilder.add(BlockusBlocks.OAK_SMALL_LOGS, "Small Oak Logs");

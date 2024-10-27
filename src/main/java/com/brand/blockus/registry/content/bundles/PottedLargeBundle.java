@@ -12,7 +12,7 @@ public class PottedLargeBundle {
 
     public PottedLargeBundle(String type, Block plant) {
 
-        this.block = BlockFactory.registerNoItem(type, BlockFactory.createLargeFlowerPot(plant));
+        this.block = BlockFactory.createLargePottedPlant(type, plant);
 
         LIST.add(this);
     }

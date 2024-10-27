@@ -7,6 +7,7 @@ import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.sound.BlockSoundGroup;
 
 import java.util.ArrayList;
+import java.util.function.Function;
 
 public class BSSWBundle {
     public static final ArrayList<BSSWBundle> LIST = new ArrayList<>();
@@ -22,18 +23,18 @@ public class BSSWBundle {
     }
 
     public BSSWBundle(String type, AbstractBlock.Settings blockSettings, boolean includeWall) {
-        Block blockInstance;
         this.type = type;
 
+        Function<AbstractBlock.Settings, Block> factory;
         if (BlockChecker.isAmethyst(type)) {
-            blockInstance = new AmethystBlock(blockSettings);
+            factory = AmethystBlock::new;
         } else if (BlockChecker.isRedstone(type)) {
-            blockInstance = new RedstoneBlock(blockSettings);
+            factory = RedstoneBlock::new;
         } else {
-            blockInstance = new Block(blockSettings);
+            factory = Block::new;
         }
 
-        this.block = BlockFactory.register(type, blockInstance);
+        this.block = BlockFactory.register(type, factory, blockSettings);
         this.slab = BlockFactory.registerSlab(this.block);
         this.stairs = BlockFactory.registerStairs(this.block);
         this.wall = includeWall ? BlockFactory.registerWall(this.block) : null;
@@ -42,47 +43,47 @@ public class BSSWBundle {
     }
 
     public BSSWBundle(String type, Block base, boolean includeWall) {
-        this(type, AbstractBlock.Settings.copy(base), includeWall);
+        this(type, BlockFactory.createCopy(base), includeWall);
         this.base = base;
     }
 
     public BSSWBundle(String type, Block base) {
-        this(type, AbstractBlock.Settings.copy(base));
+        this(type, BlockFactory.createCopy(base));
         this.base = base;
     }
 
     public BSSWBundle(String type, Block base, MapColor mapcolor) {
-        this(type, AbstractBlock.Settings.copy(base).mapColor(mapcolor));
+        this(type, BlockFactory.createCopy(base).mapColor(mapcolor));
         this.base = base;
     }
 
     public BSSWBundle(String type, Block base, MapColor mapcolor, boolean includeWall) {
-        this(type, AbstractBlock.Settings.copy(base).mapColor(mapcolor), includeWall);
+        this(type, BlockFactory.createCopy(base).mapColor(mapcolor), includeWall);
         this.base = base;
     }
 
     public BSSWBundle(String type, Block base, PistonBehavior pistonBehavior) {
-        this(type, AbstractBlock.Settings.copy(base).pistonBehavior(pistonBehavior));
+        this(type, BlockFactory.createCopy(base).pistonBehavior(pistonBehavior));
         this.base = base;
     }
 
     public BSSWBundle(String type, Block base, int luminance) {
-        this(type, AbstractBlock.Settings.copy(base).luminance((state) -> luminance));
+        this(type, BlockFactory.createCopy(base).luminance((state) -> luminance));
         this.base = base;
     }
 
     public BSSWBundle(String type, Block base, BlockSoundGroup sound) {
-        this(type, AbstractBlock.Settings.copy(base).sounds(sound));
+        this(type, BlockFactory.createCopy(base).sounds(sound));
         this.base = base;
     }
 
     public BSSWBundle(String type, Block base, BlockSoundGroup sound, boolean includeWall) {
-        this(type, AbstractBlock.Settings.copy(base).sounds(sound), includeWall);
+        this(type, BlockFactory.createCopy(base).sounds(sound), includeWall);
         this.base = base;
     }
 
     public BSSWBundle(String type, Block base, float hardness, float resistance, MapColor mapcolor) {
-        this(type, AbstractBlock.Settings.copy(base).strength(hardness, resistance).mapColor(mapcolor));
+        this(type, BlockFactory.createCopy(base).strength(hardness, resistance).mapColor(mapcolor));
         this.base = base;
     }
 

@@ -32,25 +32,20 @@ public class TimberFrameBundle {
         this.burnable = burnable;
         String type = getWood(base);
 
-        AbstractBlock.Settings blockSettings = AbstractBlock.Settings.copy(base);
+        AbstractBlock.Settings blockSettings = BlockFactory.createCopy(base);
 
-        Item.Settings itemSettings = new Item.Settings();
         if (burnable) {
             blockSettings = blockSettings.burnable();
         }
 
-        this.block = register(type + "_timber_frame", new Block(blockSettings), itemSettings);
-        this.diagonal = register(type + "_diagonal_timber_frame", new OrientableBlockBase(blockSettings), itemSettings);
-        this.cross = register(type + "_cross_timber_frame", new Block(blockSettings), itemSettings);
-        this.lattice = BlockFactory.register(type + "_lattice", new PaneBlock(AbstractBlock.Settings.copy(base)));
-        this.grate = BlockFactory.register(type + "_grate", new GrateBlock(AbstractBlock.Settings.copy(base).nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+        this.block = BlockFactory.register(type + "_timber_frame", blockSettings);
+        this.diagonal = BlockFactory.register(type + "_diagonal_timber_frame", OrientableBlockBase::new, blockSettings);
+        this.cross = BlockFactory.register(type + "_cross_timber_frame", blockSettings);
+        this.lattice = BlockFactory.register(type + "_lattice", PaneBlock::new, BlockFactory.createCopy(base));
+        this.grate = BlockFactory.register(type + "_grate", GrateBlock::new, BlockFactory.createCopy(base).nonOpaque().allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never));
         this.all = List.of(block, diagonal, cross, lattice, grate);
 
         LIST.add(this);
-    }
-
-    public static Block register(String id, Block block, Item.Settings itemSettings) {
-        return BlockFactory.register(id, block, new BlockItem(block, itemSettings));
     }
 
     public static String getWood(Block block) {

@@ -20,14 +20,14 @@ public class WoodenPostBundle {
         this.baseStripped = base2;
         this.burnable = burnable;
 
-        AbstractBlock.Settings blockSettings = AbstractBlock.Settings.copy(base).solid();
+        AbstractBlock.Settings blockSettings = BlockFactory.createCopy(base).solid();
 
         if (burnable) {
             blockSettings = blockSettings.burnable();
         }
 
-        this.block = BlockFactory.register(name, new PostBlock(blockSettings));
-        this.stripped = BlockFactory.register("stripped_" + name, new PostBlock(blockSettings));
+        this.block = BlockFactory.register(name, PostBlock::new, blockSettings);
+        this.stripped = BlockFactory.register("stripped_" + name, PostBlock::new, blockSettings);
 
         LIST.add(this);
     }

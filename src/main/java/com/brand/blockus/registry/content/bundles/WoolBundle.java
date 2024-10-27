@@ -27,10 +27,10 @@ public class WoolBundle {
 
 
         String type = dyecolor.getName() + typeSuffix;
-        this.block = BlockFactory.register(type, new Block(AbstractBlock.Settings.copy(base)));
+        this.block = BlockFactory.register(type, BlockFactory.createCopy(base));
         this.slab = BlockFactory.registerSlab(this.block);
         this.stairs = BlockFactory.registerStairs(this.block);
-        this.carpet = BlockFactory.register(type.replace("wool", "carpet"), new DyedCarpetBlock(dyecolor, AbstractBlock.Settings.copy(base2)));
+        this.carpet = BlockFactory.register(type.replace("wool", "carpet"), (settings) -> new DyedCarpetBlock(dyecolor, settings), AbstractBlock.Settings.copy(base2));
 
 
         LIST.add(this);

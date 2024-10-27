@@ -46,11 +46,11 @@ public class CopperBundle {
     public CopperBundle(String type, OxidationType oxidation, Block base) {
         this.type = type;
         this.base = base;
-        this.block = BlockFactory.register(oxidation.getName() + type, new OxidizableBlock(oxidation.getLevel(), AbstractBlock.Settings.copy(base)));
-        this.slab = BlockFactory.register(oxidation.getName() + BlockFactory.replaceId(type) + "_slab", new OxidizableSlabBlock(oxidation.getLevel(), AbstractBlock.Settings.copy(base)));
-        this.stairs = BlockFactory.register(oxidation.getName() + BlockFactory.replaceId(type) + "_stairs", new OxidizableStairsBlock(oxidation.getLevel(), base.getDefaultState(), AbstractBlock.Settings.copy(base)));
-        this.wall = BlockFactory.register(oxidation.getName() + BlockFactory.replaceId(type) + "_wall", new OxidizableWallBlock(oxidation.getLevel(), AbstractBlock.Settings.copy(base)));
-        this.blockWaxed = BlockFactory.register("waxed_" + oxidation.getName() + type, new Block(AbstractBlock.Settings.copy(base)));
+        this.block = BlockFactory.register(oxidation.getName() + type, (settings) -> new OxidizableBlock(oxidation.getLevel(), settings), BlockFactory.createCopy(base));
+        this.slab = BlockFactory.register(oxidation.getName() + BlockFactory.replaceId(type) + "_slab", (settings) -> new OxidizableSlabBlock(oxidation.getLevel(), settings), BlockFactory.createCopy(base));
+        this.stairs = BlockFactory.register(oxidation.getName() + BlockFactory.replaceId(type) + "_stairs", (settings) -> new OxidizableStairsBlock(oxidation.getLevel(), base.getDefaultState(), settings), BlockFactory.createCopy(base));
+        this.wall = BlockFactory.register(oxidation.getName() + BlockFactory.replaceId(type) + "_wall", (settings) -> new OxidizableWallBlock(oxidation.getLevel(), settings), BlockFactory.createCopy(base));
+        this.blockWaxed = BlockFactory.register("waxed_" + oxidation.getName() + type, BlockFactory.createCopy(base));
         this.slabWaxed = BlockFactory.registerSlab(blockWaxed);
         this.stairsWaxed = BlockFactory.registerStairs(blockWaxed);
         this.wallWaxed = BlockFactory.registerWall(blockWaxed);

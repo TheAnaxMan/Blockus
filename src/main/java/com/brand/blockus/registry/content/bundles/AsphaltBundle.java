@@ -24,9 +24,9 @@ public class AsphaltBundle {
 
         Block.Settings blockSettings = AbstractBlock.Settings.create().mapColor(color).instrument(NoteBlockInstrument.BASEDRUM).strength(1.5f, 6.0f).requiresTool();
 
-        this.block = BlockFactory.register(type2, new AsphaltBlock(blockSettings));
-        this.slab = BlockFactory.register(type2 + "_slab", new AsphaltSlab(AbstractBlock.Settings.copy(block)));
-        this.stairs = BlockFactory.register(type2 + "_stairs", new AsphaltStairs(block.getDefaultState(), AbstractBlock.Settings.copy(block)));
+        this.block = BlockFactory.register(type2, AsphaltBlock::new, blockSettings);
+        this.slab = BlockFactory.register(type2 + "_slab", AsphaltSlab::new, AbstractBlock.Settings.copy(block));
+        this.stairs = BlockFactory.register(type2 + "_stairs", (settings) -> new AsphaltStairs(block.getDefaultState(), settings), AbstractBlock.Settings.copy(block));
 
         LIST.add(this);
     }

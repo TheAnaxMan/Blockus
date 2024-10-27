@@ -538,9 +538,9 @@ public class BlockusRecipeProvider extends FabricRecipeProvider {
                 createShaped(RecipeCategory.DECORATIONS, CHARRED.hanging_sign, 2).group("hanging_sign").input('#', CHARRED.planks).input('X', Items.CHAIN).pattern("X X").pattern("###").pattern("###").criterion("has_charred_planks", conditionsFromItem(CHARRED.planks)).offerTo(exporter);
 
                 createShapeless(RecipeCategory.BUILDING_BLOCKS, RAW_BAMBOO.planks, 2).input(Blocks.BAMBOO_BLOCK).group("planks").criterion("has_log", conditionsFromItem(Blocks.BAMBOO_BLOCK)).offerTo(exporter);
-                offerBoatsRecipe(BlockusEntities.WHITE_OAK_BOAT.getItem(), BlockusEntities.WHITE_OAK_BOAT.getChestItem(), WHITE_OAK.planks);
-                offerBoatsRecipe(BlockusEntities.RAW_BAMBOO_RAFT.getItem(), BlockusEntities.RAW_BAMBOO_RAFT.getChestItem(), RAW_BAMBOO.planks);
-                offerBoatsRecipe(BlockusEntities.CHARRED_BOAT.getItem(), BlockusEntities.CHARRED_BOAT.getChestItem(), CHARRED.planks);
+//                offerBoatsRecipe(BlockusEntities.WHITE_OAK_BOAT.getItem(), BlockusEntities.WHITE_OAK_BOAT.getChestItem(), WHITE_OAK.planks);
+//                offerBoatsRecipe(BlockusEntities.RAW_BAMBOO_RAFT.getItem(), BlockusEntities.RAW_BAMBOO_RAFT.getChestItem(), RAW_BAMBOO.planks);
+//                offerBoatsRecipe(BlockusEntities.CHARRED_BOAT.getItem(), BlockusEntities.CHARRED_BOAT.getChestItem(), CHARRED.planks);
                 CookingRecipeJsonBuilder.createSmelting(ingredientFromTag(BlockusItemTags.PLANKS_THAT_BURN), RecipeCategory.BUILDING_BLOCKS, CHARRED.planks, 0.1F, 200).criterion("has_planks", conditionsFromTag(BlockusItemTags.PLANKS_THAT_BURN)).offerTo(exporter);
 
                 offerSmallLogsRecipe(OAK_SMALL_LOGS, Blocks.OAK_LOG);

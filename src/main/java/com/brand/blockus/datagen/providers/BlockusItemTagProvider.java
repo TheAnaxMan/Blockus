@@ -40,15 +40,15 @@ public class BlockusItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         this.copy(BlockusBlockTags.BARRIERS, BlockusItemTags.BARRIERS);
 
-        this.getOrCreateTagBuilder(ItemTags.BOATS)
-                .add(BlockusEntities.RAW_BAMBOO_RAFT.getItem())
-                .add(BlockusEntities.CHARRED_BOAT.getItem())
-                .add(BlockusEntities.WHITE_OAK_BOAT.getItem());
-
-        this.getOrCreateTagBuilder(ItemTags.CHEST_BOATS)
-                .add(BlockusEntities.RAW_BAMBOO_RAFT.getChestItem())
-                .add(BlockusEntities.CHARRED_BOAT.getChestItem())
-                .add(BlockusEntities.WHITE_OAK_BOAT.getChestItem());
+//        this.getOrCreateTagBuilder(ItemTags.BOATS)
+//                .add(BlockusEntities.RAW_BAMBOO_RAFT.getItem())
+//                .add(BlockusEntities.CHARRED_BOAT.getItem())
+//                .add(BlockusEntities.WHITE_OAK_BOAT.getItem());
+//
+//        this.getOrCreateTagBuilder(ItemTags.CHEST_BOATS)
+//                .add(BlockusEntities.RAW_BAMBOO_RAFT.getChestItem())
+//                .add(BlockusEntities.CHARRED_BOAT.getChestItem())
+//                .add(BlockusEntities.WHITE_OAK_BOAT.getChestItem());
 
         this.getOrCreateTagBuilder(ItemTags.SIGNS)
                 .add(RAW_BAMBOO.sign)
@@ -194,8 +194,8 @@ public class BlockusItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(CHARRED.stairs.asItem())
                 .add(CHARRED.button.asItem())
                 .add(CHARRED.door.asItem())
-                .add(BlockusEntities.CHARRED_BOAT.getItem())
-                .add(BlockusEntities.CHARRED_BOAT.getChestItem())
+//                .add(BlockusEntities.CHARRED_BOAT.getItem())
+//                .add(BlockusEntities.CHARRED_BOAT.getChestItem())
                 .add(CHARRED.sign)
                 .add(CHARRED.hanging_sign)
                 .add(WARPED_SMALL_STEMS.asItem())
