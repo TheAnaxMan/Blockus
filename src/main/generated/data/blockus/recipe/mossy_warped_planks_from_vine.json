@@ -3,12 +3,8 @@
   "category": "building",
   "group": "mossy_warped_planks",
   "ingredients": [
-    {
-      "item": "minecraft:warped_planks"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "minecraft:warped_planks",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

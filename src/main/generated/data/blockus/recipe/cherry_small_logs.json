@@ -3,9 +3,7 @@
   "category": "building",
   "group": "small_logs",
   "key": {
-    "#": {
-      "item": "minecraft:cherry_log"
-    }
+    "#": "minecraft:cherry_log"
   },
   "pattern": [
     " # ",

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "M": {
-      "item": "minecraft:magenta_dye"
-    },
-    "R": {
-      "item": "minecraft:red_dye"
-    }
+    "M": "minecraft:magenta_dye",
+    "R": "minecraft:red_dye"
   },
   "pattern": [
     "RMR",

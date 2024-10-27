@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "carpet",
   "key": {
-    "#": {
-      "item": "blockus:blue_gingham_wool"
-    }
+    "#": "blockus:blue_gingham_wool"
   },
   "pattern": [
     "##"

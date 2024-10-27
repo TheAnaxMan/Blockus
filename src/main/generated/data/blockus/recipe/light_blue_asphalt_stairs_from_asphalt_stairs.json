@@ -3,12 +3,8 @@
   "category": "building",
   "group": "asphalt_stairs",
   "key": {
-    "#": {
-      "item": "minecraft:light_blue_dye"
-    },
-    "X": {
-      "item": "blockus:asphalt_stairs"
-    }
+    "#": "minecraft:light_blue_dye",
+    "X": "blockus:asphalt_stairs"
   },
   "pattern": [
     "XXX",

@@ -3,12 +3,8 @@
   "category": "building",
   "group": "beveled_glass_pane_2",
   "key": {
-    "#": {
-      "item": "blockus:rainbow_petal"
-    },
-    "X": {
-      "item": "blockus:beveled_glass_pane"
-    }
+    "#": "blockus:rainbow_petal",
+    "X": "blockus:beveled_glass_pane"
   },
   "pattern": [
     "XXX",

@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_posts",
   "key": {
-    "#": {
-      "item": "minecraft:stripped_acacia_log"
-    }
+    "#": "minecraft:stripped_acacia_log"
   },
   "pattern": [
     "#",

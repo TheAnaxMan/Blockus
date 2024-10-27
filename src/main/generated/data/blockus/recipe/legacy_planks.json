@@ -3,9 +3,7 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-    {
-      "item": "blockus:legacy_log"
-    }
+    "blockus:legacy_log"
   ],
   "result": {
     "count": 4,

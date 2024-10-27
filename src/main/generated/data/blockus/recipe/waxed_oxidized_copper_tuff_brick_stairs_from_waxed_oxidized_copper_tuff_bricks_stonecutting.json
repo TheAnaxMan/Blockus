@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "blockus:waxed_oxidized_copper_tuff_bricks"
-  },
+  "ingredient": "blockus:waxed_oxidized_copper_tuff_bricks",
   "result": {
     "count": 1,
     "id": "blockus:waxed_oxidized_copper_tuff_brick_stairs"

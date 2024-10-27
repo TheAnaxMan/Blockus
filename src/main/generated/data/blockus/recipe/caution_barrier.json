@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "blockus:caution_block"
-    },
-    {
-      "item": "blockus:road_barrier"
-    }
+    "blockus:caution_block",
+    "blockus:road_barrier"
   ],
   "result": {
     "count": 1,

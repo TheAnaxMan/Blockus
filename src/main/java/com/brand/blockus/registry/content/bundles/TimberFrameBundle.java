@@ -3,8 +3,6 @@ package com.brand.blockus.registry.content.bundles;
 import com.brand.blockus.blocks.base.OrientableBlockBase;
 import com.brand.blockus.utils.BlockFactory;
 import net.minecraft.block.*;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 
 import java.util.ArrayList;

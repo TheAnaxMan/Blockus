@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "rainbow_petal",
   "ingredients": [
-    {
-      "item": "blockus:rainbow_block"
-    }
+    "blockus:rainbow_block"
   ],
   "result": {
     "count": 4,

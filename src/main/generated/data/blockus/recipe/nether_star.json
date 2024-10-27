@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "blockus:nether_stars_block"
-    }
+    "blockus:nether_stars_block"
   ],
   "result": {
     "count": 9,

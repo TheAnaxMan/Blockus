@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "item": "blockus:soul_sandstone"
-  },
+  "ingredient": "blockus:soul_sandstone",
   "result": {
     "id": "blockus:smooth_soul_sandstone"
   }

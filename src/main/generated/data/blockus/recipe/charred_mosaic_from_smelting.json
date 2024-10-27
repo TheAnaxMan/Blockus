@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "tag": "blockus:wooden_mosaic_that_burn"
-  },
+  "ingredient": "#blockus:wooden_mosaic_that_burn",
   "result": {
     "id": "blockus:charred_mosaic"
   }

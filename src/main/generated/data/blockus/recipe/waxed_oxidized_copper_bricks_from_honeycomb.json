@@ -3,12 +3,8 @@
   "category": "building",
   "group": "waxed_oxidized_copper_bricks",
   "ingredients": [
-    {
-      "item": "blockus:oxidized_copper_bricks"
-    },
-    {
-      "item": "minecraft:honeycomb"
-    }
+    "blockus:oxidized_copper_bricks",
+    "minecraft:honeycomb"
   ],
   "result": {
     "count": 1,

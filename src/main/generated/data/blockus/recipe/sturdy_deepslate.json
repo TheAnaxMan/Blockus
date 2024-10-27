@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:deepslate"
-    },
-    "X": {
-      "item": "minecraft:cobbled_deepslate"
-    }
+    "#": "minecraft:deepslate",
+    "X": "minecraft:cobbled_deepslate"
   },
   "pattern": [
     "X#X",

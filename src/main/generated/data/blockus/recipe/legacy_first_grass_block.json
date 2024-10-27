@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockus:legacy_grass_block"
-    }
+    "#": "blockus:legacy_grass_block"
   },
   "pattern": [
     "##",

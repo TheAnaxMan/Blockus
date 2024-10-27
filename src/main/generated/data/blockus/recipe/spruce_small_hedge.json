@@ -3,9 +3,7 @@
   "category": "building",
   "group": "small_hedge",
   "key": {
-    "#": {
-      "item": "minecraft:spruce_leaves"
-    }
+    "#": "minecraft:spruce_leaves"
   },
   "pattern": [
     "###",

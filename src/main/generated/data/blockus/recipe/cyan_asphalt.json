@@ -3,12 +3,8 @@
   "category": "building",
   "group": "asphalt",
   "key": {
-    "#": {
-      "item": "minecraft:cyan_dye"
-    },
-    "X": {
-      "item": "blockus:asphalt"
-    }
+    "#": "minecraft:cyan_dye",
+    "X": "blockus:asphalt"
   },
   "pattern": [
     "XXX",

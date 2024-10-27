@@ -3,12 +3,8 @@
   "category": "building",
   "group": "colored_tiles",
   "ingredients": [
-    {
-      "item": "blockus:rainbow_block"
-    },
-    {
-      "item": "blockus:rainbow_block"
-    }
+    "blockus:rainbow_block",
+    "blockus:rainbow_block"
   ],
   "result": {
     "count": 2,

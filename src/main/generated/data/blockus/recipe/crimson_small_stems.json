@@ -3,9 +3,7 @@
   "category": "building",
   "group": "small_logs",
   "key": {
-    "#": {
-      "item": "minecraft:crimson_stem"
-    }
+    "#": "minecraft:crimson_stem"
   },
   "pattern": [
     " # ",

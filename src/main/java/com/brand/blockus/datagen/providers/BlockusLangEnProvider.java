@@ -2,7 +2,6 @@ package com.brand.blockus.datagen.providers;
 
 import com.brand.blockus.itemgroups.BlockusItemGroups;
 import com.brand.blockus.registry.content.BlockusBlocks;
-import com.brand.blockus.registry.content.BlockusEntities;
 import com.brand.blockus.registry.content.bundles.*;
 import com.brand.blockus.registry.effect.BlockusEffects;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;

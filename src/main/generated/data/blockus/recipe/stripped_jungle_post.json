@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_posts",
   "key": {
-    "#": {
-      "item": "minecraft:stripped_jungle_log"
-    }
+    "#": "minecraft:stripped_jungle_log"
   },
   "pattern": [
     "#",

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "blockus:purpur_decorated_end_stone"
-    },
-    {
-      "tag": "blockus:soul_soils"
-    }
+    "blockus:purpur_decorated_end_stone",
+    "#blockus:soul_soils"
   ],
   "result": {
     "count": 1,

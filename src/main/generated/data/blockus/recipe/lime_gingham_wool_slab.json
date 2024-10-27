@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockus:lime_gingham_wool"
-    }
+    "#": "blockus:lime_gingham_wool"
   },
   "pattern": [
     "###"

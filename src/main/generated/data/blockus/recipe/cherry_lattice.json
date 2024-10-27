@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_lattices",
   "key": {
-    "#": {
-      "item": "blockus:cherry_grate"
-    }
+    "#": "blockus:cherry_grate"
   },
   "pattern": [
     "###",

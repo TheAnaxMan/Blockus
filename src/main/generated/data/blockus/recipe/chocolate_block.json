@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:cocoa_beans"
-    }
+    "#": "minecraft:cocoa_beans"
   },
   "pattern": [
     "##",

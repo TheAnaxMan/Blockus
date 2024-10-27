@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "waxed_coppered_tuff_bricks_wall",
   "key": {
-    "#": {
-      "item": "blockus:waxed_copper_tuff_bricks"
-    }
+    "#": "blockus:waxed_copper_tuff_bricks"
   },
   "pattern": [
     "###",

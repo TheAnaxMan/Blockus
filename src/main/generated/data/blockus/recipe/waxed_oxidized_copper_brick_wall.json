@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "waxed_oxidized_copper_bricks_wall",
   "key": {
-    "#": {
-      "item": "blockus:waxed_oxidized_copper_bricks"
-    }
+    "#": "blockus:waxed_oxidized_copper_bricks"
   },
   "pattern": [
     "###",

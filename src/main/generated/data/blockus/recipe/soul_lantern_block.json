@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:iron_nugget"
-    },
-    "X": {
-      "item": "minecraft:soul_lantern"
-    }
+    "#": "minecraft:iron_nugget",
+    "X": "minecraft:soul_lantern"
   },
   "pattern": [
     " # ",

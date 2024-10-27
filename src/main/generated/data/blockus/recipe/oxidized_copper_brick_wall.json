@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "blockus:oxidized_copper_bricks"
-    }
+    "#": "blockus:oxidized_copper_bricks"
   },
   "pattern": [
     "###",

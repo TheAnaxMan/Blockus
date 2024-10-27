@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_posts",
   "key": {
-    "#": {
-      "item": "minecraft:cherry_log"
-    }
+    "#": "minecraft:cherry_log"
   },
   "pattern": [
     "#",

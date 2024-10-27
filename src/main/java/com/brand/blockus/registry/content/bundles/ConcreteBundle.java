@@ -1,9 +1,7 @@
 package com.brand.blockus.registry.content.bundles;
 
 import com.brand.blockus.utils.BlockFactory;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.PillarBlock;
 
 import java.util.ArrayList;
 

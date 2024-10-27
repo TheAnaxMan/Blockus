@@ -1,7 +1,6 @@
 package com.brand.blockus.itemgroups.content;
 
 import com.brand.blockus.itemgroups.BlockusItemGroups;
-import com.brand.blockus.registry.content.BlockusEntities;
 import com.brand.blockus.registry.content.bundles.BSSWBundle;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;

@@ -3,9 +3,7 @@
   "category": "building",
   "group": "waxed_oxidized_copper_bricks_slab",
   "key": {
-    "#": {
-      "item": "blockus:waxed_oxidized_copper_bricks"
-    }
+    "#": "blockus:waxed_oxidized_copper_bricks"
   },
   "pattern": [
     "###"

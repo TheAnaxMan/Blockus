@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:water_bucket"
-    },
-    "X": {
-      "item": "minecraft:bricks"
-    }
+    "#": "minecraft:water_bucket",
+    "X": "minecraft:bricks"
   },
   "pattern": [
     "XXX",

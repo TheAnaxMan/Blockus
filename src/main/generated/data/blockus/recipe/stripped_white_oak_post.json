@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_posts",
   "key": {
-    "#": {
-      "item": "blockus:stripped_white_oak_log"
-    }
+    "#": "blockus:stripped_white_oak_log"
   },
   "pattern": [
     "#",

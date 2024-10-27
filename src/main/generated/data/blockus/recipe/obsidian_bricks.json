@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "S": {
-      "item": "minecraft:obsidian"
-    }
+    "S": "minecraft:obsidian"
   },
   "pattern": [
     "SS",

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockus:mossy_acacia_planks"
-    }
+    "#": "blockus:mossy_acacia_planks"
   },
   "pattern": [
     "#  ",

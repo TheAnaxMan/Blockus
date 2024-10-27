@@ -3,12 +3,8 @@
   "category": "building",
   "group": "mossy_acacia_planks",
   "ingredients": [
-    {
-      "item": "minecraft:acacia_planks"
-    },
-    {
-      "item": "minecraft:moss_block"
-    }
+    "minecraft:acacia_planks",
+    "minecraft:moss_block"
   ],
   "result": {
     "count": 1,

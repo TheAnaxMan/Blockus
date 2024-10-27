@@ -3,9 +3,7 @@
   "category": "building",
   "group": "diagonal_timber_frame",
   "key": {
-    "#": {
-      "item": "blockus:white_oak_timber_frame"
-    }
+    "#": "blockus:white_oak_timber_frame"
   },
   "pattern": [
     "##",

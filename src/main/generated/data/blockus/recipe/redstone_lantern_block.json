@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:iron_nugget"
-    },
-    "X": {
-      "item": "blockus:redstone_lantern"
-    }
+    "#": "minecraft:iron_nugget",
+    "X": "blockus:redstone_lantern"
   },
   "pattern": [
     " # ",

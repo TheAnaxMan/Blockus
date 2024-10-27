@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockus:mossy_birch_planks"
-    }
+    "#": "blockus:mossy_birch_planks"
   },
   "pattern": [
     "#  ",

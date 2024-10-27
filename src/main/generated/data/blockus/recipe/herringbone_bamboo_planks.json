@@ -3,9 +3,7 @@
   "category": "building",
   "group": "herringbone_planks",
   "key": {
-    "#": {
-      "item": "minecraft:bamboo_planks"
-    }
+    "#": "minecraft:bamboo_planks"
   },
   "pattern": [
     "#  ",

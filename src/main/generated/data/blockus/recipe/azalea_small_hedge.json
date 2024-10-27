@@ -3,9 +3,7 @@
   "category": "building",
   "group": "small_hedge",
   "key": {
-    "#": {
-      "item": "minecraft:azalea_leaves"
-    }
+    "#": "minecraft:azalea_leaves"
   },
   "pattern": [
     "###",

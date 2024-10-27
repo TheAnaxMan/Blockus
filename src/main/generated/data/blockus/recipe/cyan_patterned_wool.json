@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "S": {
-      "item": "minecraft:cyan_wool"
-    }
+    "S": "minecraft:cyan_wool"
   },
   "pattern": [
     "SS",

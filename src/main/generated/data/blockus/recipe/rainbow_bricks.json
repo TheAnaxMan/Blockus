@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "S": {
-      "item": "blockus:rainbow_block"
-    }
+    "S": "blockus:rainbow_block"
   },
   "pattern": [
     "SS",

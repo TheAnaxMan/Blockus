@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "item": "blockus:diorite_bricks"
-  },
+  "ingredient": "blockus:diorite_bricks",
   "result": {
     "id": "blockus:cracked_diorite_bricks"
   }

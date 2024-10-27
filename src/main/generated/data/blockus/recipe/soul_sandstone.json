@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "tag": "blockus:soul_soils"
-    }
+    "#": "#blockus:soul_soils"
   },
   "pattern": [
     "##",

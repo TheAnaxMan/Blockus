@@ -1,7 +1,8 @@
 package com.brand.blockus.utils;
 
 import com.brand.blockus.Blockus;
-import com.brand.blockus.blocks.base.*;
+import com.brand.blockus.blocks.base.LargeFlowerPotBlock;
+import com.brand.blockus.blocks.base.SmallHedgeBlock;
 import com.brand.blockus.blocks.base.amethyst.AmethystSlabBlock;
 import com.brand.blockus.blocks.base.amethyst.AmethystStairsBlock;
 import com.brand.blockus.blocks.base.amethyst.AmethystWallBlock;
@@ -111,7 +112,7 @@ public class BlockFactory {
 
     // Pressure Plate
     public static Block createPressurePlate(String baseid, Block base, BlockSetType blockSetType) {
-        return register(replaceId(baseid) + "_pressure_plate", (settings) ->  new PressurePlateBlock(blockSetType, settings), createCopy(base).solid().noCollision().pistonBehavior(PistonBehavior.DESTROY));
+        return register(replaceId(baseid) + "_pressure_plate", (settings) -> new PressurePlateBlock(blockSetType, settings), createCopy(base).solid().noCollision().pistonBehavior(PistonBehavior.DESTROY));
     }
 
     public static Block registerStonePressurePlate(Block base) {
@@ -211,8 +212,9 @@ public class BlockFactory {
 
     // Register
     public static Block registerNoItem(String id, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings blockSettings) {
-        Block block = factory.apply(blockSettings.registryKey(RegistryKey.of(RegistryKeys.BLOCK, Blockus.id(id))));
-        return Registry.register(Registries.BLOCK, id, block);
+        var key = RegistryKey.of(RegistryKeys.BLOCK, Blockus.id(id));
+        Block block = factory.apply(blockSettings.registryKey(key));
+        return Registry.register(Registries.BLOCK, key, block);
     }
 
     public static Block register(String id, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings blockSettings, Item.Settings itemSettings) {

@@ -1,7 +1,7 @@
 {
   "values": [
-    "blockus:raw_bamboo_sign",
-    "blockus:charred_sign",
-    "blockus:white_oak_sign"
+    "blockus:raw_bamboo_sign_temp",
+    "blockus:charred_sign_temp",
+    "blockus:white_oak_sign_temp"
   ]
 }

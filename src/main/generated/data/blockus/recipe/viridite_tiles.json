@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "S": {
-      "item": "blockus:viridite_bricks"
-    }
+    "S": "blockus:viridite_bricks"
   },
   "pattern": [
     "SS",

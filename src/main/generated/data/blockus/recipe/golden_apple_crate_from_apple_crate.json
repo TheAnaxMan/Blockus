@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockus:apple_crate"
-    },
-    "X": {
-      "item": "minecraft:gold_block"
-    }
+    "#": "blockus:apple_crate",
+    "X": "minecraft:gold_block"
   },
   "pattern": [
     "XXX",

@@ -3,12 +3,8 @@
   "category": "building",
   "group": "redstone_lamps",
   "key": {
-    "#": {
-      "item": "minecraft:redstone_lamp"
-    },
-    "S": {
-      "item": "minecraft:light_gray_dye"
-    }
+    "#": "minecraft:redstone_lamp",
+    "S": "minecraft:light_gray_dye"
   },
   "pattern": [
     " S ",

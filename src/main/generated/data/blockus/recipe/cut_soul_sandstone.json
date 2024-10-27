@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "S": {
-      "item": "blockus:soul_sandstone"
-    }
+    "S": "blockus:soul_sandstone"
   },
   "pattern": [
     "SS",

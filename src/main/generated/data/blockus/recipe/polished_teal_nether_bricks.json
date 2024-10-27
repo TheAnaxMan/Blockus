@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "S": {
-      "item": "blockus:teal_nether_bricks"
-    }
+    "S": "blockus:teal_nether_bricks"
   },
   "pattern": [
     "SS",

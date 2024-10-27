@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:gold_nugget"
-    },
-    "X": {
-      "item": "blockus:golden_bars"
-    }
+    "#": "minecraft:gold_nugget",
+    "X": "blockus:golden_bars"
   },
   "pattern": [
     "##",

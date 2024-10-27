@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "coal",
   "ingredients": [
-    {
-      "item": "blockus:legacy_coal_block"
-    }
+    "blockus:legacy_coal_block"
   ],
   "result": {
     "count": 9,

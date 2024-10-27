@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "blockus:gold_bricks"
-  },
+  "ingredient": "blockus:gold_bricks",
   "result": {
     "count": 1,
     "id": "blockus:gold_brick_wall"

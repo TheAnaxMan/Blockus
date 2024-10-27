@@ -3,9 +3,7 @@
   "category": "redstone",
   "group": "wooden_pressure_plate",
   "key": {
-    "#": {
-      "item": "blockus:charred_planks"
-    }
+    "#": "blockus:charred_planks"
   },
   "pattern": [
     "##"

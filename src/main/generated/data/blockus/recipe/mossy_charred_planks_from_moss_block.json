@@ -3,12 +3,8 @@
   "category": "building",
   "group": "mossy_charred_planks",
   "ingredients": [
-    {
-      "item": "blockus:charred_planks"
-    },
-    {
-      "item": "minecraft:moss_block"
-    }
+    "blockus:charred_planks",
+    "minecraft:moss_block"
   ],
   "result": {
     "count": 1,

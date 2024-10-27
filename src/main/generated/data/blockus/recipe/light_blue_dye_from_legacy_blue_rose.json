@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "light_blue_dye",
   "ingredients": [
-    {
-      "item": "blockus:legacy_blue_rose"
-    }
+    "blockus:legacy_blue_rose"
   ],
   "result": {
     "count": 2,

@@ -3,12 +3,8 @@
   "category": "building",
   "group": "shingles",
   "key": {
-    "#": {
-      "item": "minecraft:black_dye"
-    },
-    "X": {
-      "item": "blockus:shingles"
-    }
+    "#": "minecraft:black_dye",
+    "X": "blockus:shingles"
   },
   "pattern": [
     "XXX",

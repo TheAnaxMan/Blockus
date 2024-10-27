@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockus:gold_bricks"
-    }
+    "#": "blockus:gold_bricks"
   },
   "pattern": [
     "#  ",

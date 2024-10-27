@@ -3,9 +3,7 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-    {
-      "tag": "blockus:white_oak_logs"
-    }
+    "#blockus:white_oak_logs"
   ],
   "result": {
     "count": 4,

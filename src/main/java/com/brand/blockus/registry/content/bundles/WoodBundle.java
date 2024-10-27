@@ -1,18 +1,12 @@
 package com.brand.blockus.registry.content.bundles;
 
-import com.brand.blockus.Blockus;
 import com.brand.blockus.registry.content.BlockusItems;
 import com.brand.blockus.utils.BlockFactory;
-//import com.terraformersmc.terraform.sign.api.block.TerraformHangingSignBlock;
-//import com.terraformersmc.terraform.sign.api.block.TerraformSignBlock;
-//import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock;
-//import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.Item;
 import net.minecraft.item.SignItem;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
 
@@ -77,11 +71,11 @@ public class WoodBundle {
 //        this.wall_hanging_sign = BlockFactory.registerNoItem(type + "_wall_hanging_sign", new TerraformWallHangingSignBlock(hangingSignPath, hangingSignGuiPath, copyLootTable(ceiling_hanging_sign).mapColor(color).noCollision().strength(1.0F).sounds(sound)));
 //        this.hanging_sign = BlockusItems.registerHangingSign(ceiling_hanging_sign, wall_hanging_sign);
 
-        this.standing_sign = BlockFactory.register(type + "_sign_temp", blockSettings);
-        this.wall_sign = BlockFactory.register(type + "_wall_sign_temp", blockSettings);
+        this.standing_sign = BlockFactory.registerNoItem(type + "_sign_temp", Block::new, blockSettings);
+        this.wall_sign = BlockFactory.registerNoItem(type + "_wall_sign_temp", Block::new, blockSettings);
         this.sign = BlockusItems.register(this.standing_sign, (block, settings) -> new SignItem(block, this.wall_sign, settings), (new Item.Settings()).maxCount(16));
-        this.ceiling_hanging_sign = BlockFactory.register(type + "hanging_sign_temp", blockSettings);
-        this.wall_hanging_sign = BlockFactory.register(type + "_wall_hanging_sign_temp", blockSettings);
+        this.ceiling_hanging_sign = BlockFactory.registerNoItem(type + "_hanging_sign_temp", Block::new, blockSettings);
+        this.wall_hanging_sign = BlockFactory.registerNoItem(type + "_wall_hanging_sign_temp", Block::new, blockSettings);
         this.hanging_sign = BlockusItems.register(this.ceiling_hanging_sign, (block, settings) -> new SignItem(block, this.wall_hanging_sign, settings), (new Item.Settings()).maxCount(16));
 
 

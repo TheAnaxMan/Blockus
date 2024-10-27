@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockus:pink_asphalt"
-    }
+    "#": "blockus:pink_asphalt"
   },
   "pattern": [
     "#  ",

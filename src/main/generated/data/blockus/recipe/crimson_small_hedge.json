@@ -3,9 +3,7 @@
   "category": "building",
   "group": "small_hedge",
   "key": {
-    "#": {
-      "item": "minecraft:nether_wart_block"
-    }
+    "#": "minecraft:nether_wart_block"
   },
   "pattern": [
     "###",

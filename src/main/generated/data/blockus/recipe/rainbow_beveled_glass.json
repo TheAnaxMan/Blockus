@@ -3,9 +3,7 @@
   "category": "building",
   "group": "beveled_glass",
   "key": {
-    "S": {
-      "item": "blockus:rainbow_glass"
-    }
+    "S": "blockus:rainbow_glass"
   },
   "pattern": [
     "SS",

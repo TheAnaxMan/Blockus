@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_lattices",
   "key": {
-    "#": {
-      "item": "blockus:mangrove_grate"
-    }
+    "#": "blockus:mangrove_grate"
   },
   "pattern": [
     "###",

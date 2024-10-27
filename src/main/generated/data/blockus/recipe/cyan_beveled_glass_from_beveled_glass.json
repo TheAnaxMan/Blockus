@@ -3,12 +3,8 @@
   "category": "building",
   "group": "beveled_glass_2",
   "key": {
-    "#": {
-      "item": "minecraft:cyan_dye"
-    },
-    "X": {
-      "item": "blockus:beveled_glass"
-    }
+    "#": "minecraft:cyan_dye",
+    "X": "blockus:beveled_glass"
   },
   "pattern": [
     "XXX",

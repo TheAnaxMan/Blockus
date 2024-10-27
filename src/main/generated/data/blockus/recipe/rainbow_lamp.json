@@ -3,12 +3,8 @@
   "category": "building",
   "group": "redstone_lamps",
   "key": {
-    "#": {
-      "item": "minecraft:redstone_lamp"
-    },
-    "S": {
-      "item": "blockus:rainbow_petal"
-    }
+    "#": "minecraft:redstone_lamp",
+    "S": "blockus:rainbow_petal"
   },
   "pattern": [
     " S ",

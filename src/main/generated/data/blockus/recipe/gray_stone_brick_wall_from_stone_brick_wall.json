@@ -3,12 +3,8 @@
   "category": "building",
   "group": "stained_stone_brick_wall",
   "key": {
-    "#": {
-      "item": "minecraft:gray_dye"
-    },
-    "X": {
-      "item": "minecraft:stone_brick_wall"
-    }
+    "#": "minecraft:gray_dye",
+    "X": "minecraft:stone_brick_wall"
   },
   "pattern": [
     "XXX",

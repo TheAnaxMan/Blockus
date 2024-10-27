@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "lapis_lazuli",
   "ingredients": [
-    {
-      "item": "blockus:legacy_lapis_block"
-    }
+    "blockus:legacy_lapis_block"
   ],
   "result": {
     "count": 9,

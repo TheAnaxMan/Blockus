@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "gold_ingot",
   "ingredients": [
-    {
-      "item": "blockus:legacy_explosion_proof_gold_block"
-    }
+    "blockus:legacy_explosion_proof_gold_block"
   ],
   "result": {
     "count": 9,

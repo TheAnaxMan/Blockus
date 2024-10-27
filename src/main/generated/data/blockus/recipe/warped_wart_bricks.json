@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "S": {
-      "item": "minecraft:warped_wart_block"
-    }
+    "S": "minecraft:warped_wart_block"
   },
   "pattern": [
     "SS",

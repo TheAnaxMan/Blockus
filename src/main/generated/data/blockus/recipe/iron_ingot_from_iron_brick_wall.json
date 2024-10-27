@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "minecraft:iron_ingot",
   "ingredients": [
-    {
-      "item": "blockus:iron_brick_wall"
-    }
+    "blockus:iron_brick_wall"
   ],
   "result": {
     "count": 9,

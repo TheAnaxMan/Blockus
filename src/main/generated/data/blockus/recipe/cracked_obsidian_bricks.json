@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "item": "blockus:obsidian_bricks"
-  },
+  "ingredient": "blockus:obsidian_bricks",
   "result": {
     "id": "blockus:cracked_obsidian_bricks"
   }

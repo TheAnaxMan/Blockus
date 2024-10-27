@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "blockus:apple_crate"
-    }
+    "blockus:apple_crate"
   ],
   "result": {
     "count": 9,

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "minecraft:polished_blackstone_bricks"
-    },
-    {
-      "tag": "blockus:warped_nether_grass"
-    }
+    "minecraft:polished_blackstone_bricks",
+    "#blockus:warped_nether_grass"
   ],
   "result": {
     "count": 1,

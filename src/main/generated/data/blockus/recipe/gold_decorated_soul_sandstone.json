@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:gold_ingot"
-    },
-    "X": {
-      "item": "blockus:cut_soul_sandstone"
-    }
+    "#": "minecraft:gold_ingot",
+    "X": "blockus:cut_soul_sandstone"
   },
   "pattern": [
     "##",

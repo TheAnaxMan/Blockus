@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:end_stone"
-    },
-    "X": {
-      "item": "minecraft:purpur_block"
-    }
+    "#": "minecraft:end_stone",
+    "X": "minecraft:purpur_block"
   },
   "pattern": [
     "#X",

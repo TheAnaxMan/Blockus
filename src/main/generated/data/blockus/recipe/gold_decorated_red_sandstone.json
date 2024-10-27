@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:gold_ingot"
-    },
-    "X": {
-      "item": "minecraft:cut_red_sandstone"
-    }
+    "#": "minecraft:gold_ingot",
+    "X": "minecraft:cut_red_sandstone"
   },
   "pattern": [
     "##",

@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_posts",
   "key": {
-    "#": {
-      "item": "minecraft:crimson_stem"
-    }
+    "#": "minecraft:crimson_stem"
   },
   "pattern": [
     "#",

@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "minecraft:gold_ingot",
   "ingredients": [
-    {
-      "item": "blockus:gold_brick_slab"
-    }
+    "blockus:gold_brick_slab"
   ],
   "result": {
     "count": 4,

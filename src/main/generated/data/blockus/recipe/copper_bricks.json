@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "S": {
-      "item": "minecraft:cut_copper"
-    }
+    "S": "minecraft:cut_copper"
   },
   "pattern": [
     "SS",

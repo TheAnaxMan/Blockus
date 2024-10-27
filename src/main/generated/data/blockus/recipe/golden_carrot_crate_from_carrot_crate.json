@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockus:carrot_crate"
-    },
-    "X": {
-      "item": "minecraft:gold_ingot"
-    }
+    "#": "blockus:carrot_crate",
+    "X": "minecraft:gold_ingot"
   },
   "pattern": [
     "XXX",

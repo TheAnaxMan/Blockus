@@ -3,12 +3,8 @@
   "category": "building",
   "group": "shingles_stairs",
   "key": {
-    "#": {
-      "item": "minecraft:white_dye"
-    },
-    "X": {
-      "item": "blockus:shingles_stairs"
-    }
+    "#": "minecraft:white_dye",
+    "X": "blockus:shingles_stairs"
   },
   "pattern": [
     "XXX",

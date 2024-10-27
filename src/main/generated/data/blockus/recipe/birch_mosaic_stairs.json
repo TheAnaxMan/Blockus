@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockus:birch_mosaic"
-    }
+    "#": "blockus:birch_mosaic"
   },
   "pattern": [
     "#  ",

@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "diamond",
   "ingredients": [
-    {
-      "item": "blockus:legacy_diamond_block"
-    }
+    "blockus:legacy_diamond_block"
   ],
   "result": {
     "count": 9,

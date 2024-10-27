@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_lattices",
   "key": {
-    "#": {
-      "item": "blockus:raw_bamboo_grate"
-    }
+    "#": "blockus:raw_bamboo_grate"
   },
   "pattern": [
     "###",

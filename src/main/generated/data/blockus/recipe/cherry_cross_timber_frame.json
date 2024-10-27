@@ -3,9 +3,7 @@
   "category": "building",
   "group": "cross_timber_frame",
   "key": {
-    "#": {
-      "item": "blockus:cherry_diagonal_timber_frame"
-    }
+    "#": "blockus:cherry_diagonal_timber_frame"
   },
   "pattern": [
     "##",

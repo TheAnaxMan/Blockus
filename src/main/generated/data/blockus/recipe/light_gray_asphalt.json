@@ -3,12 +3,8 @@
   "category": "building",
   "group": "asphalt",
   "key": {
-    "#": {
-      "item": "minecraft:light_gray_dye"
-    },
-    "X": {
-      "item": "blockus:asphalt"
-    }
+    "#": "minecraft:light_gray_dye",
+    "X": "blockus:asphalt"
   },
   "pattern": [
     "XXX",

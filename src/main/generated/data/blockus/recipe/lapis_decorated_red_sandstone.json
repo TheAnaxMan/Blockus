@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:lapis_lazuli"
-    },
-    "X": {
-      "item": "minecraft:cut_red_sandstone"
-    }
+    "#": "minecraft:lapis_lazuli",
+    "X": "minecraft:cut_red_sandstone"
   },
   "pattern": [
     "##",

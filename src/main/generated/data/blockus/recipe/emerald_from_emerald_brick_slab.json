@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "minecraft:emerald",
   "ingredients": [
-    {
-      "item": "blockus:emerald_brick_slab"
-    }
+    "blockus:emerald_brick_slab"
   ],
   "result": {
     "count": 4,

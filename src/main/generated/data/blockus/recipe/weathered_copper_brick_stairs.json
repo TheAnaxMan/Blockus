@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockus:weathered_copper_bricks"
-    }
+    "#": "blockus:weathered_copper_bricks"
   },
   "pattern": [
     "#  ",

@@ -3,9 +3,7 @@
   "category": "redstone",
   "group": "wooden_button",
   "ingredients": [
-    {
-      "item": "blockus:charred_planks"
-    }
+    "blockus:charred_planks"
   ],
   "result": {
     "count": 1,

@@ -3,9 +3,7 @@
   "category": "building",
   "group": "beveled_glass",
   "key": {
-    "S": {
-      "item": "minecraft:green_stained_glass"
-    }
+    "S": "minecraft:green_stained_glass"
   },
   "pattern": [
     "SS",

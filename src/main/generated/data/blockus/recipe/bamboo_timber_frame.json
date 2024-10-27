@@ -3,12 +3,8 @@
   "category": "building",
   "group": "timber_frame",
   "key": {
-    "#": {
-      "item": "minecraft:paper"
-    },
-    "X": {
-      "item": "minecraft:bamboo_planks"
-    }
+    "#": "minecraft:paper",
+    "X": "minecraft:bamboo_planks"
   },
   "pattern": [
     "#X",

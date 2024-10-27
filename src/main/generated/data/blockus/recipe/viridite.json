@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:sculk"
-    },
-    "S": {
-      "item": "minecraft:deepslate"
-    }
+    "#": "minecraft:sculk",
+    "S": "minecraft:deepslate"
   },
   "pattern": [
     " S ",

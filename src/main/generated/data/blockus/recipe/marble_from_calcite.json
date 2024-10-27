@@ -3,12 +3,8 @@
   "category": "building",
   "group": "marble",
   "ingredients": [
-    {
-      "item": "minecraft:calcite"
-    },
-    {
-      "item": "blockus:limestone"
-    }
+    "minecraft:calcite",
+    "blockus:limestone"
   ],
   "result": {
     "count": 1,

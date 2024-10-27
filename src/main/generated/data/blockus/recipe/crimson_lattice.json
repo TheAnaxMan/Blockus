@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_lattices",
   "key": {
-    "#": {
-      "item": "blockus:crimson_grate"
-    }
+    "#": "blockus:crimson_grate"
   },
   "pattern": [
     "###",

@@ -27,7 +27,7 @@ public class BlockusBlocks extends BlockFactory {
     public static final Block HERRINGBONE_STONE_BRICKS = register("herringbone_stone_bricks", createCopy(Blocks.STONE_BRICKS));
     public static final Block STONE_CIRCULAR_PAVING = register("stone_circular_paving", OrientableBlockBase::new, createCopy(Blocks.STONE_BRICKS));
     public static final Block STONE_DOOR = createStoneDoor("stone_door", 1.5f, 20.0f, BlockSoundGroup.STONE, MapColor.STONE_GRAY, BlockSetType.STONE);
-    public static final Block STONE_TRAPDOOR = createStoneTrapdoor("stone_trapdoor",1.5f, 20.0f, BlockSoundGroup.STONE, MapColor.STONE_GRAY, BlockSetType.STONE);
+    public static final Block STONE_TRAPDOOR = createStoneTrapdoor("stone_trapdoor", 1.5f, 20.0f, BlockSoundGroup.STONE, MapColor.STONE_GRAY, BlockSetType.STONE);
     public static final Block SMOOTH_STONE_STAIRS = registerStairs(Blocks.SMOOTH_STONE);
     public static final Block STURDY_STONE = register("sturdy_stone", createCopy(Blocks.COBBLESTONE, PistonBehavior.BLOCK));
 
@@ -199,8 +199,8 @@ public class BlockusBlocks extends BlockFactory {
     public static final Block CRACKED_OBSIDIAN_BRICKS = register("cracked_obsidian_bricks", createCopy(BlockusBlocks.OBSIDIAN_BRICKS.block));
     public static final Block OBSIDIAN_PILLAR = createPillar("obsidian", BlockusBlocks.OBSIDIAN_BRICKS.block);
     public static final Block OBSIDIAN_CIRCULAR_PAVING = register("obsidian_circular_paving", OrientableBlockBase::new, createCopy(BlockusBlocks.OBSIDIAN_BRICKS.block));
-    public static final Block OBSIDIAN_REINFORCED_DOOR = createStoneDoor("obsidian_reinforced_door",50.0F, 1200.0F, BlockSoundGroup.STONE, MapColor.BLACK, BlockSetType.IRON);
-    public static final Block OBSIDIAN_REINFORCED_TRAPDOOR = createStoneTrapdoor("obsidian_reinforced_trapdoor",50.0F, 1200.0F, BlockSoundGroup.STONE, MapColor.BLACK, BlockSetType.IRON);
+    public static final Block OBSIDIAN_REINFORCED_DOOR = createStoneDoor("obsidian_reinforced_door", 50.0F, 1200.0F, BlockSoundGroup.STONE, MapColor.BLACK, BlockSetType.IRON);
+    public static final Block OBSIDIAN_REINFORCED_TRAPDOOR = createStoneTrapdoor("obsidian_reinforced_trapdoor", 50.0F, 1200.0F, BlockSoundGroup.STONE, MapColor.BLACK, BlockSetType.IRON);
     public static final Block GLOWING_OBSIDIAN = register("glowing_obsidian", createCopy(Blocks.OBSIDIAN, PistonBehavior.BLOCK).luminance((state) -> 15));
 
     // Netherrack
@@ -297,7 +297,7 @@ public class BlockusBlocks extends BlockFactory {
     public static final Block LAPIS_DECORATED_SOUL_SANDSTONE = register("lapis_decorated_soul_sandstone", createCopy(BlockusBlocks.SOUL_SANDSTONE.block));
 
     // Rainbow
-    public static final Block RAINBOW_ROSE = register("rainbow_rose", (settings) ->  new FertilizableFlowerBlock(StatusEffects.GLOWING, 8, settings), AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ));
+    public static final Block RAINBOW_ROSE = register("rainbow_rose", (settings) -> new FertilizableFlowerBlock(StatusEffects.GLOWING, 8, settings), AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ));
     public static final Block RAINBOW_PETALS = register("rainbow_petal", FlowerbedBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().sounds(BlockSoundGroup.PINK_PETALS).pistonBehavior(PistonBehavior.DESTROY));
 
     public static final Block POTTED_RAINBOW_ROSE = createPottedPlant("potted_rainbow_rose", RAINBOW_ROSE);
@@ -517,7 +517,7 @@ public class BlockusBlocks extends BlockFactory {
     public static final Block TROPICAL_FISH_CRATE = register("tropical_fish_crate", createCrates());
     public static final Block COD_CRATE = register("cod_crate", createCrates());
     public static final Block COOKIE_BLOCK = register("cookie_block", CookieBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.ORANGE).strength(0.5F).sounds(BlockSoundGroup.GRASS));
-    public static final Block CHORUS_BLOCK = register("chorus_block", PillarBlock::new,AbstractBlock.Settings.create().mapColor(MapColor.PURPLE).strength(0.5f).sounds(BlockSoundGroup.GRASS));
+    public static final Block CHORUS_BLOCK = register("chorus_block", PillarBlock::new, AbstractBlock.Settings.create().mapColor(MapColor.PURPLE).strength(0.5f).sounds(BlockSoundGroup.GRASS));
     public static final Block POTATO_CRATE = register("potato_crate", createCrates());
     public static final Block APPLE_CRATE = register("apple_crate", createCrates());
     public static final Block GOLDEN_APPLE_CRATE = register("golden_apple_crate", createCrates());

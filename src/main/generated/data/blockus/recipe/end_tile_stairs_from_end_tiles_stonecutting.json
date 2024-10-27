@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "blockus:end_tiles"
-  },
+  "ingredient": "blockus:end_tiles",
   "result": {
     "count": 1,
     "id": "blockus:end_tile_stairs"

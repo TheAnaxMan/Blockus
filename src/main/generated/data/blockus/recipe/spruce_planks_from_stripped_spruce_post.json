@@ -3,9 +3,7 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-    {
-      "item": "blockus:stripped_spruce_post"
-    }
+    "blockus:stripped_spruce_post"
   ],
   "result": {
     "count": 2,

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "S": {
-      "item": "minecraft:glass"
-    }
+    "S": "minecraft:glass"
   },
   "pattern": [
     "SS",

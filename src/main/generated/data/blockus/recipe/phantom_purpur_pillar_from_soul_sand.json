@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "minecraft:purpur_pillar"
-    },
-    {
-      "tag": "blockus:soul_soils"
-    }
+    "minecraft:purpur_pillar",
+    "#blockus:soul_soils"
   ],
   "result": {
     "count": 1,

@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "blockus:water_bricks"
-  },
+  "ingredient": "blockus:water_bricks",
   "result": {
     "count": 1,
     "id": "blockus:chiseled_water_bricks"

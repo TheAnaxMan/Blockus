@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockus:charred_mosaic"
-    }
+    "#": "blockus:charred_mosaic"
   },
   "pattern": [
     "###"

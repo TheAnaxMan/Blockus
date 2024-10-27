@@ -3,12 +3,8 @@
   "category": "building",
   "group": "stained_stone_brick_slab",
   "key": {
-    "#": {
-      "item": "minecraft:white_dye"
-    },
-    "X": {
-      "item": "minecraft:stone_brick_slab"
-    }
+    "#": "minecraft:white_dye",
+    "X": "minecraft:stone_brick_slab"
   },
   "pattern": [
     "XXX",

@@ -3,9 +3,7 @@
   "category": "building",
   "group": "small_hedge",
   "key": {
-    "#": {
-      "item": "minecraft:birch_leaves"
-    }
+    "#": "minecraft:birch_leaves"
   },
   "pattern": [
     "###",

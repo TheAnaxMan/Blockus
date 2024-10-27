@@ -3,12 +3,8 @@
   "category": "building",
   "group": "asphalt",
   "key": {
-    "#": {
-      "tag": "minecraft:coals"
-    },
-    "X": {
-      "item": "minecraft:gravel"
-    }
+    "#": "#minecraft:coals",
+    "X": "minecraft:gravel"
   },
   "pattern": [
     "XXX",

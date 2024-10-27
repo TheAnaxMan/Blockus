@@ -3,12 +3,8 @@
   "category": "building",
   "group": "shingles_slab",
   "key": {
-    "#": {
-      "item": "minecraft:light_blue_dye"
-    },
-    "X": {
-      "item": "blockus:shingles_slab"
-    }
+    "#": "minecraft:light_blue_dye",
+    "X": "blockus:shingles_slab"
   },
   "pattern": [
     "XXX",

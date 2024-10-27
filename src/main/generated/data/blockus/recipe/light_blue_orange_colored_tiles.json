@@ -3,12 +3,8 @@
   "category": "building",
   "group": "colored_tiles",
   "ingredients": [
-    {
-      "item": "minecraft:light_blue_concrete"
-    },
-    {
-      "item": "minecraft:orange_concrete"
-    }
+    "minecraft:light_blue_concrete",
+    "minecraft:orange_concrete"
   ],
   "result": {
     "count": 2,

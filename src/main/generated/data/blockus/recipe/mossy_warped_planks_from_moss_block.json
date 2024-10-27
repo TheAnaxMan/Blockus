@@ -3,12 +3,8 @@
   "category": "building",
   "group": "mossy_warped_planks",
   "ingredients": [
-    {
-      "item": "minecraft:warped_planks"
-    },
-    {
-      "item": "minecraft:moss_block"
-    }
+    "minecraft:warped_planks",
+    "minecraft:moss_block"
   ],
   "result": {
     "count": 1,

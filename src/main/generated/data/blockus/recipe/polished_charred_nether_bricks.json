@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "S": {
-      "item": "blockus:charred_nether_bricks"
-    }
+    "S": "blockus:charred_nether_bricks"
   },
   "pattern": [
     "SS",

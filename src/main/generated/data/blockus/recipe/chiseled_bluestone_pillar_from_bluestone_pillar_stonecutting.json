@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "blockus:bluestone_pillar"
-  },
+  "ingredient": "blockus:bluestone_pillar",
   "result": {
     "count": 1,
     "id": "blockus:chiseled_bluestone_pillar"

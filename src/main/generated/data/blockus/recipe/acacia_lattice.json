@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_lattices",
   "key": {
-    "#": {
-      "item": "blockus:acacia_grate"
-    }
+    "#": "blockus:acacia_grate"
   },
   "pattern": [
     "###",

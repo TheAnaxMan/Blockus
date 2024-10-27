@@ -3,9 +3,7 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-    {
-      "item": "blockus:birch_post"
-    }
+    "blockus:birch_post"
   ],
   "result": {
     "count": 2,

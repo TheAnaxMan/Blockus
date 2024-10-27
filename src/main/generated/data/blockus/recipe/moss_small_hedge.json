@@ -3,9 +3,7 @@
   "category": "building",
   "group": "small_hedge",
   "key": {
-    "#": {
-      "item": "minecraft:moss_block"
-    }
+    "#": "minecraft:moss_block"
   },
   "pattern": [
     "###",

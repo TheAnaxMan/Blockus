@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:green_dye"
-    },
-    "S": {
-      "item": "minecraft:deepslate"
-    }
+    "#": "minecraft:green_dye",
+    "S": "minecraft:deepslate"
   },
   "pattern": [
     " S ",

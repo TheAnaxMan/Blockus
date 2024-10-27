@@ -3,12 +3,8 @@
   "category": "building",
   "group": "mossy_jungle_planks",
   "ingredients": [
-    {
-      "item": "minecraft:jungle_planks"
-    },
-    {
-      "item": "minecraft:moss_block"
-    }
+    "minecraft:jungle_planks",
+    "minecraft:moss_block"
   ],
   "result": {
     "count": 1,

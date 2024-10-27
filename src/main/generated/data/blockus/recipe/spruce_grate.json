@@ -3,12 +3,8 @@
   "category": "building",
   "group": "wooden_grates",
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "X": {
-      "item": "minecraft:spruce_planks"
-    }
+    "#": "minecraft:stick",
+    "X": "minecraft:spruce_planks"
   },
   "pattern": [
     " # ",

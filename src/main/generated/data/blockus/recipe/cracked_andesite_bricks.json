@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "item": "blockus:andesite_bricks"
-  },
+  "ingredient": "blockus:andesite_bricks",
   "result": {
     "id": "blockus:cracked_andesite_bricks"
   }

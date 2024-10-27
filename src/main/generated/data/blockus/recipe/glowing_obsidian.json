@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:shroomlight"
-    },
-    "S": {
-      "item": "minecraft:obsidian"
-    }
+    "#": "minecraft:shroomlight",
+    "S": "minecraft:obsidian"
   },
   "pattern": [
     " S ",

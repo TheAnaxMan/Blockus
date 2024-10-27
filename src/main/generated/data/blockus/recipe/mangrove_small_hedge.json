@@ -3,9 +3,7 @@
   "category": "building",
   "group": "small_hedge",
   "key": {
-    "#": {
-      "item": "minecraft:mangrove_leaves"
-    }
+    "#": "minecraft:mangrove_leaves"
   },
   "pattern": [
     "###",

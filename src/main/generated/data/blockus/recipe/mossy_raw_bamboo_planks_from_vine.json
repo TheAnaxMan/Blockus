@@ -3,12 +3,8 @@
   "category": "building",
   "group": "mossy_raw_bamboo_planks",
   "ingredients": [
-    {
-      "item": "blockus:raw_bamboo_planks"
-    },
-    {
-      "item": "minecraft:vine"
-    }
+    "blockus:raw_bamboo_planks",
+    "minecraft:vine"
   ],
   "result": {
     "count": 1,

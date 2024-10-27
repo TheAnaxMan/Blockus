@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "minecraft:diamond",
   "ingredients": [
-    {
-      "item": "blockus:diamond_brick_wall"
-    }
+    "blockus:diamond_brick_wall"
   ],
   "result": {
     "count": 9,

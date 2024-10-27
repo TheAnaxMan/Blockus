@@ -2,8 +2,11 @@ package com.brand.blockus.registry.content.bundles;
 
 import com.brand.blockus.blocks.base.OxidizableWallBlock;
 import com.brand.blockus.utils.BlockFactory;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
 import net.minecraft.block.Oxidizable.OxidationLevel;
+import net.minecraft.block.OxidizableBlock;
+import net.minecraft.block.OxidizableSlabBlock;
+import net.minecraft.block.OxidizableStairsBlock;
 
 import java.util.ArrayList;
 

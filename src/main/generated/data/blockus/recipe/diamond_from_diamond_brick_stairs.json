@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "minecraft:diamond",
   "ingredients": [
-    {
-      "item": "blockus:diamond_brick_stairs"
-    }
+    "blockus:diamond_brick_stairs"
   ],
   "result": {
     "count": 9,

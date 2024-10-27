@@ -3,15 +3,9 @@
   "category": "building",
   "group": "neon_blocks",
   "key": {
-    "A": {
-      "item": "minecraft:amethyst_shard"
-    },
-    "D": {
-      "item": "minecraft:cyan_dye"
-    },
-    "S": {
-      "item": "minecraft:glow_ink_sac"
-    }
+    "A": "minecraft:amethyst_shard",
+    "D": "minecraft:cyan_dye",
+    "S": "minecraft:glow_ink_sac"
   },
   "pattern": [
     " A ",

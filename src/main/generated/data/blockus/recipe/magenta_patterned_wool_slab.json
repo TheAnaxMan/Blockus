@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockus:magenta_patterned_wool"
-    }
+    "#": "blockus:magenta_patterned_wool"
   },
   "pattern": [
     "###"

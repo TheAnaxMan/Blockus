@@ -3,12 +3,8 @@
   "category": "building",
   "group": "beveled_glass_pane_2",
   "key": {
-    "#": {
-      "item": "minecraft:gray_dye"
-    },
-    "X": {
-      "item": "blockus:beveled_glass_pane"
-    }
+    "#": "minecraft:gray_dye",
+    "X": "blockus:beveled_glass_pane"
   },
   "pattern": [
     "XXX",

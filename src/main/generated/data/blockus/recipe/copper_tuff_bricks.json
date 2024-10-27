@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:copper_ingot"
-    },
-    "X": {
-      "item": "minecraft:tuff_bricks"
-    }
+    "#": "minecraft:copper_ingot",
+    "X": "minecraft:tuff_bricks"
   },
   "pattern": [
     "#X",

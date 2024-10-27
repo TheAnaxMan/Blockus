@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "item": "blockus:paper_block"
-  },
+  "ingredient": "blockus:paper_block",
   "result": {
     "id": "blockus:burnt_paper_block"
   }

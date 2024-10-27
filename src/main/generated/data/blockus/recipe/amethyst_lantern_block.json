@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:iron_nugget"
-    },
-    "X": {
-      "item": "blockus:amethyst_lantern"
-    }
+    "#": "minecraft:iron_nugget",
+    "X": "blockus:amethyst_lantern"
   },
   "pattern": [
     " # ",

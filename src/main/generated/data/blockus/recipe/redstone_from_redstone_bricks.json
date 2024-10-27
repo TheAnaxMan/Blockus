@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "minecraft:redstone",
   "ingredients": [
-    {
-      "item": "blockus:redstone_bricks"
-    }
+    "blockus:redstone_bricks"
   ],
   "result": {
     "count": 9,

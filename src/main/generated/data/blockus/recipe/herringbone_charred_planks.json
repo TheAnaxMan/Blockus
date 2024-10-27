@@ -3,9 +3,7 @@
   "category": "building",
   "group": "herringbone_planks",
   "key": {
-    "#": {
-      "item": "blockus:charred_planks"
-    }
+    "#": "blockus:charred_planks"
   },
   "pattern": [
     "#  ",

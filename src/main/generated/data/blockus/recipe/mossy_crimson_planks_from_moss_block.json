@@ -3,12 +3,8 @@
   "category": "building",
   "group": "mossy_crimson_planks",
   "ingredients": [
-    {
-      "item": "minecraft:crimson_planks"
-    },
-    {
-      "item": "minecraft:moss_block"
-    }
+    "minecraft:crimson_planks",
+    "minecraft:moss_block"
   ],
   "result": {
     "count": 1,

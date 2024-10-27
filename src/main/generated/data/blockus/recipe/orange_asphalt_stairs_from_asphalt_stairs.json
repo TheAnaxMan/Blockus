@@ -3,12 +3,8 @@
   "category": "building",
   "group": "asphalt_stairs",
   "key": {
-    "#": {
-      "item": "minecraft:orange_dye"
-    },
-    "X": {
-      "item": "blockus:asphalt_stairs"
-    }
+    "#": "minecraft:orange_dye",
+    "X": "blockus:asphalt_stairs"
   },
   "pattern": [
     "XXX",

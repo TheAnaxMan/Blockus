@@ -3,9 +3,7 @@
   "category": "building",
   "group": "diagonal_timber_frame",
   "key": {
-    "#": {
-      "item": "blockus:charred_timber_frame"
-    }
+    "#": "blockus:charred_timber_frame"
   },
   "pattern": [
     "##",

@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "minecraft:lapis_lazuli",
   "ingredients": [
-    {
-      "item": "blockus:lapis_bricks"
-    }
+    "blockus:lapis_bricks"
   ],
   "result": {
     "count": 9,

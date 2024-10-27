@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:blaze_powder"
-    },
-    "X": {
-      "item": "minecraft:nether_brick"
-    }
+    "#": "minecraft:blaze_powder",
+    "X": "minecraft:nether_brick"
   },
   "pattern": [
     "#X",

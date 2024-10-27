@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "minecraft:polished_blackstone_bricks"
-    },
-    {
-      "item": "minecraft:crimson_roots"
-    }
+    "minecraft:polished_blackstone_bricks",
+    "minecraft:crimson_roots"
   ],
   "result": {
     "count": 1,

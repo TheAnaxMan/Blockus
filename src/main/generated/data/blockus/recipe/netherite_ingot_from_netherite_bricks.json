@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "minecraft:netherite_ingot",
   "ingredients": [
-    {
-      "item": "blockus:netherite_bricks"
-    }
+    "blockus:netherite_bricks"
   ],
   "result": {
     "count": 9,

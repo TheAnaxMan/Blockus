@@ -3,12 +3,8 @@
   "category": "building",
   "group": "rainbow_glowstone",
   "key": {
-    "G": {
-      "item": "minecraft:glowstone_dust"
-    },
-    "R": {
-      "item": "blockus:rainbow_petal"
-    }
+    "G": "minecraft:glowstone_dust",
+    "R": "blockus:rainbow_petal"
   },
   "pattern": [
     " G ",

@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "minecraft:emerald",
   "ingredients": [
-    {
-      "item": "blockus:emerald_brick_wall"
-    }
+    "blockus:emerald_brick_wall"
   ],
   "result": {
     "count": 9,

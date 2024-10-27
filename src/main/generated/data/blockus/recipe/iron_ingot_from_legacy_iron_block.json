@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "iron_ingot",
   "ingredients": [
-    {
-      "item": "blockus:legacy_iron_block"
-    }
+    "blockus:legacy_iron_block"
   ],
   "result": {
     "count": 9,

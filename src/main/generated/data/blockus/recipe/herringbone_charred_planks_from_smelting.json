@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "tag": "blockus:herringbone_planks_that_burn"
-  },
+  "ingredient": "#blockus:herringbone_planks_that_burn",
   "result": {
     "id": "blockus:herringbone_charred_planks"
   }

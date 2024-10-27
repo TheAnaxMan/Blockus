@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "S": {
-      "item": "blockus:chocolate_bricks"
-    }
+    "S": "blockus:chocolate_bricks"
   },
   "pattern": [
     "SS",

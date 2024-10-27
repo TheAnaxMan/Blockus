@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "blockus:small_viridite_bricks"
-    }
+    "#": "blockus:small_viridite_bricks"
   },
   "pattern": [
     "###",

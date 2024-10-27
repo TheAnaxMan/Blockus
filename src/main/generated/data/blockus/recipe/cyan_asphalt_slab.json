@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockus:cyan_asphalt"
-    }
+    "#": "blockus:cyan_asphalt"
   },
   "pattern": [
     "###"

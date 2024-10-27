@@ -3,9 +3,7 @@
   "category": "building",
   "group": "patterned_carpet",
   "key": {
-    "S": {
-      "item": "minecraft:brown_carpet"
-    }
+    "S": "minecraft:brown_carpet"
   },
   "pattern": [
     "SS",

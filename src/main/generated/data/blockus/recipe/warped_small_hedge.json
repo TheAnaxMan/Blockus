@@ -3,9 +3,7 @@
   "category": "building",
   "group": "small_hedge",
   "key": {
-    "#": {
-      "item": "minecraft:warped_wart_block"
-    }
+    "#": "minecraft:warped_wart_block"
   },
   "pattern": [
     "###",

@@ -46,14 +46,14 @@ public class PostBlock extends PillarBlock implements Waterloggable {
     public PostBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState()
-                .with(WATERLOGGED, false)
-                .with(AXIS, Axis.Y)
-                .with(NORTH, ConnectionType.NONE)
-                .with(SOUTH, ConnectionType.NONE)
-                .with(WEST, ConnectionType.NONE)
-                .with(EAST, ConnectionType.NONE)
-                .with(UP, ConnectionType.NONE)
-                .with(DOWN, ConnectionType.NONE)
+            .with(WATERLOGGED, false)
+            .with(AXIS, Axis.Y)
+            .with(NORTH, ConnectionType.NONE)
+            .with(SOUTH, ConnectionType.NONE)
+            .with(WEST, ConnectionType.NONE)
+            .with(EAST, ConnectionType.NONE)
+            .with(UP, ConnectionType.NONE)
+            .with(DOWN, ConnectionType.NONE)
         );
     }
 

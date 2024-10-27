@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "blockus:lime_shingles"
-    }
+    "#": "blockus:lime_shingles"
   },
   "pattern": [
     "###"

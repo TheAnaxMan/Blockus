@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "blockus:bread_box"
-    }
+    "blockus:bread_box"
   ],
   "result": {
     "count": 9,

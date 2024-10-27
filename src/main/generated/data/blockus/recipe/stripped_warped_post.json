@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_posts",
   "key": {
-    "#": {
-      "item": "minecraft:stripped_warped_stem"
-    }
+    "#": "minecraft:stripped_warped_stem"
   },
   "pattern": [
     "#",

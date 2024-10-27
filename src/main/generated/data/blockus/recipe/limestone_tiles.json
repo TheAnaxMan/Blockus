@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "S": {
-      "item": "blockus:limestone_bricks"
-    }
+    "S": "blockus:limestone_bricks"
   },
   "pattern": [
     "SS",

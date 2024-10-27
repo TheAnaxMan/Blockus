@@ -3,9 +3,7 @@
   "category": "building",
   "group": "beveled_glass_pane",
   "key": {
-    "#": {
-      "item": "blockus:red_beveled_glass"
-    }
+    "#": "blockus:red_beveled_glass"
   },
   "pattern": [
     "###",

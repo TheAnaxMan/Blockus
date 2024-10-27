@@ -3,12 +3,8 @@
   "category": "building",
   "group": "lit_redstone_lamps",
   "key": {
-    "#": {
-      "item": "blockus:redstone_lamp_lit"
-    },
-    "S": {
-      "item": "blockus:rainbow_petal"
-    }
+    "#": "blockus:redstone_lamp_lit",
+    "S": "blockus:rainbow_petal"
   },
   "pattern": [
     " S ",

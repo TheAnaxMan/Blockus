@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "blockus:marble"
-  },
+  "ingredient": "blockus:marble",
   "result": {
     "count": 1,
     "id": "blockus:polished_marble_stairs"

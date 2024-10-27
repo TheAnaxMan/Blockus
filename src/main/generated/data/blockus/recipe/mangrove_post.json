@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_posts",
   "key": {
-    "#": {
-      "item": "minecraft:mangrove_log"
-    }
+    "#": "minecraft:mangrove_log"
   },
   "pattern": [
     "#",

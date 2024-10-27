@@ -3,12 +3,8 @@
   "category": "building",
   "group": "marble",
   "key": {
-    "#": {
-      "item": "blockus:limestone"
-    },
-    "X": {
-      "item": "minecraft:bone_meal"
-    }
+    "#": "blockus:limestone",
+    "X": "minecraft:bone_meal"
   },
   "pattern": [
     "#X",

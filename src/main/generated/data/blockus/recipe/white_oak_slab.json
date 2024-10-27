@@ -3,9 +3,7 @@
   "category": "building",
   "group": "wooden_slab",
   "key": {
-    "#": {
-      "item": "blockus:white_oak_planks"
-    }
+    "#": "blockus:white_oak_planks"
   },
   "pattern": [
     "###"

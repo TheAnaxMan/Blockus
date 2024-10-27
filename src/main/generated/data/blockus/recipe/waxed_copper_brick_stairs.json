@@ -3,9 +3,7 @@
   "category": "building",
   "group": "waxed_copper_bricks_stairs",
   "key": {
-    "#": {
-      "item": "blockus:waxed_copper_bricks"
-    }
+    "#": "blockus:waxed_copper_bricks"
   },
   "pattern": [
     "#  ",

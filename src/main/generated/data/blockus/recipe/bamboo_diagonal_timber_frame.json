@@ -3,9 +3,7 @@
   "category": "building",
   "group": "diagonal_timber_frame",
   "key": {
-    "#": {
-      "item": "blockus:bamboo_timber_frame"
-    }
+    "#": "blockus:bamboo_timber_frame"
   },
   "pattern": [
     "##",

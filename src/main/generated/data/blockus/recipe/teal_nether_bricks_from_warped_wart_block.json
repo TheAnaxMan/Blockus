@@ -3,12 +3,8 @@
   "category": "building",
   "group": "teal_nether_bricks",
   "ingredients": [
-    {
-      "item": "minecraft:warped_wart_block"
-    },
-    {
-      "item": "minecraft:nether_bricks"
-    }
+    "minecraft:warped_wart_block",
+    "minecraft:nether_bricks"
   ],
   "result": {
     "count": 2,
