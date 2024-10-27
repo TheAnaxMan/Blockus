@@ -22,7 +22,7 @@ public class AsphaltBundle {
         String type = color.getName() + "_asphalt";
         String type2 = type.replace("black_asphalt", "asphalt");
 
-        Block.Settings blockSettings = AbstractBlock.Settings.create().mapColor(color).instrument(NoteBlockInstrument.BASEDRUM).strength(1.5f, 6.0f).requiresTool();
+        Block.Settings blockSettings = BlockFactory.create().mapColor(color).instrument(NoteBlockInstrument.BASEDRUM).strength(1.5f, 6.0f).requiresTool();
 
         this.block = BlockFactory.register(type2, AsphaltBlock::new, blockSettings);
         this.slab = BlockFactory.register(type2 + "_slab", AsphaltSlab::new, AbstractBlock.Settings.copy(block));

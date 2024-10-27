@@ -35,7 +35,11 @@ public class BlockFactory {
         return id.replace("bricks", "brick").replace("tiles", "tile").replace("_block", "").replace("_planks", "");
     }
 
-    // Copy
+    // Base
+    public static AbstractBlock.Settings create() {
+        return AbstractBlock.Settings.create();
+    }
+
     public static AbstractBlock.Settings createCopy(Block base) {
         return AbstractBlock.Settings.copy(base);
     }
@@ -45,24 +49,24 @@ public class BlockFactory {
     }
 
     // Pillar
-    public static Block createPillar(String baseid, Block base) {
-        return register(replaceId(baseid) + "_pillar", PillarBlock::new, createCopy(base));
+    public static Block registerPillar(String baseId, Block base) {
+        return register(replaceId(baseId) + "_pillar", PillarBlock::new, createCopy(base));
     }
 
     public static Block registerPillar(Block base) {
-        return createPillar(Registries.BLOCK.getId(base).getPath(), base);
+        return registerPillar(Registries.BLOCK.getId(base).getPath(), base);
     }
 
-    public static Block registerPillar(String id, Block base) {
+    public static Block registerPillar2(String id, Block base) {
         return register(id, PillarBlock::new, createCopy(base));
     }
 
     // Slab
-    public static Block createSlab(String baseid, Block base) {
-        String slabId = replaceId(baseid) + "_slab";
-        if (BlockChecker.isAmethyst(baseid)) {
+    public static Block createSlab(String baseId, Block base) {
+        String slabId = replaceId(baseId) + "_slab";
+        if (BlockChecker.isAmethyst(baseId)) {
             return register(slabId, AmethystSlabBlock::new, createCopy(base));
-        } else if (BlockChecker.isRedstone(baseid)) {
+        } else if (BlockChecker.isRedstone(baseId)) {
             return register(slabId, RedstoneSlabBlock::new, createCopy(base));
         } else {
             return register(slabId, SlabBlock::new, createCopy(base));
@@ -74,11 +78,11 @@ public class BlockFactory {
     }
 
     // Stairs
-    public static Block createStairs(String baseid, Block base) {
-        String stairsId = replaceId(baseid) + "_stairs";
-        if (BlockChecker.isAmethyst(baseid)) {
+    public static Block createStairs(String baseId, Block base) {
+        String stairsId = replaceId(baseId) + "_stairs";
+        if (BlockChecker.isAmethyst(baseId)) {
             return register(stairsId, (settings) -> new AmethystStairsBlock(base.getDefaultState(), settings), createCopy(base));
-        } else if (BlockChecker.isRedstone(baseid)) {
+        } else if (BlockChecker.isRedstone(baseId)) {
             return register(stairsId, (settings) -> new RedstoneStairsBlock(base.getDefaultState(), settings), createCopy(base));
         } else {
             return register(stairsId, (settings) -> new StairsBlock(base.getDefaultState(), settings), createCopy(base));
@@ -90,11 +94,11 @@ public class BlockFactory {
     }
 
     // Wall
-    public static Block createWall(String baseid, Block base) {
-        String wallId = replaceId(baseid) + "_wall";
-        if (BlockChecker.isAmethyst(baseid)) {
+    public static Block createWall(String baseId, Block base) {
+        String wallId = replaceId(baseId) + "_wall";
+        if (BlockChecker.isAmethyst(baseId)) {
             return register(wallId, AmethystWallBlock::new, createCopy(base));
-        } else if (BlockChecker.isRedstone(baseid)) {
+        } else if (BlockChecker.isRedstone(baseId)) {
             return register(wallId, RedstoneWallBlock::new, createCopy(base));
         } else {
             return register(wallId, WallBlock::new, createCopy(base));
@@ -105,21 +109,21 @@ public class BlockFactory {
         return createWall(Registries.BLOCK.getId(base).getPath(), base);
     }
 
-    public static Block registerSmallHedge(String id, Block base) {
+    public static Block smallHedge(String id, Block base) {
         return register(id, SmallHedgeBlock::new, createCopy(base).allowsSpawning(BlockFactory::canSpawnOnLeaves).suffocates(BlockFactory::never).blockVision(BlockFactory::never));
     }
 
 
     // Pressure Plate
-    public static Block createPressurePlate(String baseid, Block base, BlockSetType blockSetType) {
-        return register(replaceId(baseid) + "_pressure_plate", (settings) -> new PressurePlateBlock(blockSetType, settings), createCopy(base).solid().noCollision().pistonBehavior(PistonBehavior.DESTROY));
+    public static Block createPressurePlate(String baseId, Block base, BlockSetType blockSetType) {
+        return register(replaceId(baseId) + "_pressure_plate", (settings) -> new PressurePlateBlock(blockSetType, settings), createCopy(base).solid().noCollision().pistonBehavior(PistonBehavior.DESTROY));
     }
 
-    public static Block registerStonePressurePlate(Block base) {
+    public static Block stonePressurePlate(Block base) {
         return createPressurePlate(Registries.BLOCK.getId(base).getPath(), base, BlockSetType.STONE);
     }
 
-    public static Block registerWoodenPressurePlate(Block base) {
+    public static Block woodenPressurePlate(Block base) {
         return createPressurePlate(Registries.BLOCK.getId(base).getPath(), base, BlockSetType.OAK);
     }
 
@@ -128,64 +132,64 @@ public class BlockFactory {
         return register(id + "_button", (settings) -> new ButtonBlock(BlockSetType.STONE, 20, settings), createCopy(base).noCollision().pistonBehavior(PistonBehavior.DESTROY));
     }
 
-    public static Block registerStoneButton(Block base) {
+    public static Block stoneButton(Block base) {
         return createStoneButton(Registries.BLOCK.getId(base).getPath(), base);
     }
 
     // Plants
 
-    public static Block createPottedPlant(String id, Block content) {
-        return registerNoItem(id, (settings) -> new FlowerPotBlock(content, settings), AbstractBlock.Settings.create().instrument(NoteBlockInstrument.BASEDRUM).breakInstantly().pistonBehavior(PistonBehavior.DESTROY).nonOpaque());
+    public static Block pottedPlant(String id, Block content) {
+        return registerNoItem(id, (settings) -> new FlowerPotBlock(content, settings), create().instrument(NoteBlockInstrument.BASEDRUM).breakInstantly().pistonBehavior(PistonBehavior.DESTROY).nonOpaque());
     }
 
-    public static Block createLargePottedPlant(String id, Block content) {
-        return registerNoItem(id, (settings) -> new LargeFlowerPotBlock(content, settings), AbstractBlock.Settings.create().instrument(NoteBlockInstrument.BASEDRUM).strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.BLOCK).nonOpaque());
+    public static Block largePottedPlant(String id, Block content) {
+        return registerNoItem(id, (settings) -> new LargeFlowerPotBlock(content, settings), create().instrument(NoteBlockInstrument.BASEDRUM).strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.BLOCK).nonOpaque());
     }
 
-    public static Block createLargeFlowerPot(String id, Block content) {
-        return register(id, (settings) -> new LargeFlowerPotBlock(content, settings), AbstractBlock.Settings.create().instrument(NoteBlockInstrument.BASEDRUM).strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.BLOCK).nonOpaque());
+    public static Block largeFlowerPot(String id) {
+        return register(id, (settings) -> new LargeFlowerPotBlock(Blocks.AIR, settings), create().instrument(NoteBlockInstrument.BASEDRUM).strength(0.5F, 1.0F).pistonBehavior(PistonBehavior.BLOCK).nonOpaque());
     }
 
     // Door & Trapdoor
     public static AbstractBlock.Settings createDoorTrapdoorBlockSettings(float hardness, float resistance, BlockSoundGroup sound, MapColor color, NoteBlockInstrument instrument) {
-        return AbstractBlock.Settings.create().mapColor(color).instrument(instrument).strength(hardness, resistance).sounds(sound).nonOpaque().pistonBehavior(PistonBehavior.DESTROY);
+        return create().mapColor(color).instrument(instrument).strength(hardness, resistance).sounds(sound).nonOpaque().pistonBehavior(PistonBehavior.DESTROY);
     }
 
-    public static Block createWoodenDoor(String id, float hardness, float resistance, BlockSoundGroup sound, MapColor color, BlockSetType blockSetType) {
+    public static Block woodenDoor(String id, float hardness, float resistance, BlockSoundGroup sound, MapColor color, BlockSetType blockSetType) {
         return register(id, (settings) -> new DoorBlock(blockSetType, settings), createDoorTrapdoorBlockSettings(hardness, resistance, sound, color, NoteBlockInstrument.BASS).burnable());
     }
 
-    public static Block createStoneDoor(String id, float hardness, float resistance, BlockSoundGroup sound, MapColor color, BlockSetType blockSetType) {
+    public static Block stoneDoor(String id, float hardness, float resistance, BlockSoundGroup sound, MapColor color, BlockSetType blockSetType) {
         return register(id, (settings) -> new DoorBlock(blockSetType, settings), createDoorTrapdoorBlockSettings(hardness, resistance, sound, color, NoteBlockInstrument.BASEDRUM).requiresTool());
     }
 
-    public static Block createWoodenTrapdoor(String id, float hardness, float resistance, BlockSoundGroup sound, MapColor color, BlockSetType blockSetType) {
+    public static Block woodenTrapdoor(String id, float hardness, float resistance, BlockSoundGroup sound, MapColor color, BlockSetType blockSetType) {
         return register(id, (settings) -> new TrapdoorBlock(blockSetType, settings), createDoorTrapdoorBlockSettings(hardness, resistance, sound, color, NoteBlockInstrument.BASS).burnable());
     }
 
-    public static Block createStoneTrapdoor(String id, float hardness, float resistance, BlockSoundGroup sound, MapColor color, BlockSetType blockSetType) {
+    public static Block stoneTrapdoor(String id, float hardness, float resistance, BlockSoundGroup sound, MapColor color, BlockSetType blockSetType) {
         return register(id, (settings) -> new TrapdoorBlock(blockSetType, settings), createDoorTrapdoorBlockSettings(hardness, resistance, sound, color, NoteBlockInstrument.BASEDRUM).requiresTool());
     }
 
     // Light
     public static AbstractBlock.Settings createLampBlock(float hardness, float resistance, BlockSoundGroup sound, int luminance, MapColor color) {
-        return AbstractBlock.Settings.create().mapColor(color).strength(hardness, resistance).sounds(sound).luminance((state) -> luminance);
+        return create().mapColor(color).strength(hardness, resistance).sounds(sound).luminance((state) -> luminance);
     }
 
-    public static AbstractBlock.Settings createNeonBlock(DyeColor color) {
-        return AbstractBlock.Settings.create().mapColor(color).luminance((state) -> 3).sounds(BlockSoundGroup.GLASS).strength(0.5f, 0.5f).emissiveLighting(BlockFactory::always).allowsSpawning(BlockFactory::never);
+    public static Block neonBlock(String id, DyeColor color) {
+        return register(id, create().mapColor(color).luminance((state) -> 3).sounds(BlockSoundGroup.GLASS).strength(0.5f, 0.5f).emissiveLighting(BlockFactory::always).allowsSpawning(BlockFactory::never));
     }
 
-    public static AbstractBlock.Settings createRedstoneLamp() {
-        return createCopy(Blocks.REDSTONE_LAMP).allowsSpawning(BlockFactory::always);
+    public static Block redstoneLamp(String id, MapColor mapColor) {
+        return register(id, RedstoneLampBlock::new, createCopy(Blocks.REDSTONE_LAMP).mapColor(mapColor).allowsSpawning(BlockFactory::always));
     }
 
-    public static AbstractBlock.Settings createLitRedstoneLamp() {
-        return createCopy(Blocks.REDSTONE_LAMP).luminance((state) -> 15).allowsSpawning(BlockFactory::always);
+    public static Block litRedstoneLamp(String id, Block base) {
+        return register(id, createCopy(base).luminance((state) -> 15).allowsSpawning(BlockFactory::always));
     }
 
-    public static AbstractBlock.Settings createFuturneoBlock(MapColor color) {
-        return AbstractBlock.Settings.create().mapColor(color).luminance((state) -> 15).strength(0.5f, 0.5f).sounds(BlockSoundGroup.GLASS).allowsSpawning(BlockFactory::always);
+    public static Block futurneoBlock(String id, MapColor color) {
+        return register(id, create().mapColor(color).luminance((state) -> 15).strength(0.5f, 0.5f).sounds(BlockSoundGroup.GLASS).allowsSpawning(BlockFactory::always));
     }
 
     // Glass
@@ -198,16 +202,20 @@ public class BlockFactory {
     }
 
     // Other
-    public static AbstractBlock.Settings createWoodenPane() {
-        return AbstractBlock.Settings.create().mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).strength(0.1f, 0.8f).sounds(BlockSoundGroup.WOOD).burnable();
+    public static Block woodenPane(String id) {
+        return register(id, PaneBlock::new, create().mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).strength(0.1f, 0.8f).sounds(BlockSoundGroup.WOOD).burnable());
     }
 
-    public static AbstractBlock.Settings createCrates() {
-        return AbstractBlock.Settings.create().mapColor(Blocks.OAK_PLANKS.getDefaultMapColor()).strength(2.5f).instrument(NoteBlockInstrument.BASS).sounds(BlockSoundGroup.WOOD);
+    public static AbstractBlock.Settings createCrate() {
+        return create().mapColor(Blocks.OAK_PLANKS.getDefaultMapColor()).strength(2.5f).instrument(NoteBlockInstrument.BASS).sounds(BlockSoundGroup.WOOD);
     }
 
-    public static AbstractBlock.Settings createLightCrate() {
-        return AbstractBlock.Settings.create().mapColor(Blocks.OAK_PLANKS.getDefaultMapColor()).strength(2.5f).luminance((state) -> 14).instrument(NoteBlockInstrument.BASS).sounds(BlockSoundGroup.WOOD);
+    public static Block crate(String id) {
+        return register(id, createCrate());
+    }
+
+    public static Block crate(String id, int luminance) {
+        return register(id, createCrate().luminance((state) -> luminance));
     }
 
     // Register

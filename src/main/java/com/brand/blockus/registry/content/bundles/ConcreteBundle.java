@@ -26,7 +26,7 @@ public class ConcreteBundle {
         this.wall = BlockFactory.registerWall(this.block);
         String replace = type.replace("_bricks", "");
         this.chiseled = BlockFactory.register("chiseled_" + replace, BlockFactory.createCopy(base));
-        this.pillar = BlockFactory.registerPillar(replace + "_pillar", base);
+        this.pillar = BlockFactory.registerPillar2(replace + "_pillar", base);
 
         LIST.add(this);
     }

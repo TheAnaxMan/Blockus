@@ -17,19 +17,19 @@ public class BlockChecker {
         return types.stream().anyMatch(t -> type.equals("mossy_" + t + "_planks"));
     }
 
-    public static boolean isUnwaxedCopper(String baseid) {
-        return baseid.contains("copper") && !baseid.contains("waxed");
+    public static boolean isUnwaxedCopper(String baseId) {
+        return baseId.contains("copper") && !baseId.contains("waxed");
     }
 
-    public static boolean isAmethyst(String baseid) {
-        return baseid.contains("amethyst");
+    public static boolean isAmethyst(String baseId) {
+        return baseId.contains("amethyst");
     }
 
-    public static boolean isRedstone(String baseid) {
-        return baseid.contains("redstone");
+    public static boolean isRedstone(String baseId) {
+        return baseId.contains("redstone");
     }
 
-    public static boolean isNetherite(String baseid) {
-        return baseid.contains("netherite");
+    public static boolean isNetherite(String baseId) {
+        return baseId.contains("netherite");
     }
 }

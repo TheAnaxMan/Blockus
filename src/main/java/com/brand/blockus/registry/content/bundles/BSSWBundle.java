@@ -88,7 +88,7 @@ public class BSSWBundle {
     }
 
     public BSSWBundle(String type, float hardness, float resistance, MapColor color, boolean includeWall) {
-        this(type, AbstractBlock.Settings.create().mapColor(color).strength(hardness, resistance).sounds(BlockSoundGroup.STONE), includeWall);
+        this(type, BlockFactory.create().mapColor(color).strength(hardness, resistance).sounds(BlockSoundGroup.STONE), includeWall);
     }
 
     public static ArrayList<BSSWBundle> values() {

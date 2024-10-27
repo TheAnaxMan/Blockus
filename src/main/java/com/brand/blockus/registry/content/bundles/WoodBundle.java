@@ -37,10 +37,10 @@ public class WoodBundle {
         this.base = base;
         this.burnable = burnable;
 
-        AbstractBlock.Settings blockSettings = AbstractBlock.Settings.create().mapColor(color).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(sound);
+        AbstractBlock.Settings blockSettings = BlockFactory.create().mapColor(color).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(sound);
         AbstractBlock.Settings blockSettings2 = BlockFactory.createDoorTrapdoorBlockSettings(0.1f, 0.8f, sound, color, NoteBlockInstrument.BASS);
-        AbstractBlock.Settings signSettings = AbstractBlock.Settings.create().mapColor(color).noCollision().strength(1.0F).sounds(sound);
-        AbstractBlock.Settings hangingSignSettings = AbstractBlock.Settings.create().mapColor(color).noCollision().strength(1.0F).sounds(sound);
+        AbstractBlock.Settings signSettings = BlockFactory.create().mapColor(color).noCollision().strength(1.0F).sounds(sound);
+        AbstractBlock.Settings hangingSignSettings = BlockFactory.create().mapColor(color).noCollision().strength(1.0F).sounds(sound);
 
         if (burnable) {
             blockSettings = blockSettings.burnable();
@@ -56,7 +56,7 @@ public class WoodBundle {
         this.fence_gate = BlockFactory.register(type + "_fence_gate", (settings) -> new FenceGateBlock(woodtype, settings), BlockFactory.createCopy(base));
         this.door = BlockFactory.register(type + "_door", (settings) -> new DoorBlock(blocksettype, settings), blockSettings2);
         this.trapdoor = BlockFactory.register(type + "_trapdoor", (settings) -> new TrapdoorBlock(blocksettype, settings), blockSettings2);
-        this.pressure_plate = BlockFactory.registerWoodenPressurePlate(this.planks);
+        this.pressure_plate = BlockFactory.woodenPressurePlate(this.planks);
         this.button = BlockFactory.register(type + "_button", (settings) -> new ButtonBlock(blocksettype, 30, settings), AbstractBlock.Settings.copy(planks).noCollision());
 
         // sign
@@ -71,11 +71,11 @@ public class WoodBundle {
 //        this.wall_hanging_sign = BlockFactory.registerNoItem(type + "_wall_hanging_sign", new TerraformWallHangingSignBlock(hangingSignPath, hangingSignGuiPath, copyLootTable(ceiling_hanging_sign).mapColor(color).noCollision().strength(1.0F).sounds(sound)));
 //        this.hanging_sign = BlockusItems.registerHangingSign(ceiling_hanging_sign, wall_hanging_sign);
 
-        this.standing_sign = BlockFactory.registerNoItem(type + "_sign_temp", Block::new, blockSettings);
-        this.wall_sign = BlockFactory.registerNoItem(type + "_wall_sign_temp", Block::new, blockSettings);
+        this.standing_sign = BlockFactory.registerNoItem(type + "_sign", Block::new, blockSettings);
+        this.wall_sign = BlockFactory.registerNoItem(type + "_wall_sign", Block::new, blockSettings);
         this.sign = BlockusItems.register(this.standing_sign, (block, settings) -> new SignItem(block, this.wall_sign, settings), (new Item.Settings()).maxCount(16));
-        this.ceiling_hanging_sign = BlockFactory.registerNoItem(type + "_hanging_sign_temp", Block::new, blockSettings);
-        this.wall_hanging_sign = BlockFactory.registerNoItem(type + "_wall_hanging_sign_temp", Block::new, blockSettings);
+        this.ceiling_hanging_sign = BlockFactory.registerNoItem(type + "_hanging_sign", Block::new, blockSettings);
+        this.wall_hanging_sign = BlockFactory.registerNoItem(type + "_wall_hanging_sign", Block::new, blockSettings);
         this.hanging_sign = BlockusItems.register(this.ceiling_hanging_sign, (block, settings) -> new SignItem(block, this.wall_hanging_sign, settings), (new Item.Settings()).maxCount(16));
 
 
@@ -96,7 +96,7 @@ public class WoodBundle {
     }
 
     public static AbstractBlock.Settings copyLootTable(Block block) {
-        AbstractBlock.Settings settings2 = AbstractBlock.Settings.create().lootTable(block.getLootTableKey()).overrideTranslationKey(block.getTranslationKey());
+        AbstractBlock.Settings settings2 = BlockFactory.create().lootTable(block.getLootTableKey()).overrideTranslationKey(block.getTranslationKey());
         return settings2;
     }
 
