@@ -1,8 +1,10 @@
 package com.brand.blockus;
 
 import com.brand.blockus.registry.content.BlockusBlocks;
+import com.brand.blockus.registry.content.BlockusEntities;
 import com.brand.blockus.registry.content.bundles.TimberFrameBundle;
 import com.brand.blockus.registry.content.bundles.WoodenPostBundle;
+import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
@@ -147,9 +149,9 @@ public class BlockusClient implements ClientModInitializer {
             BlockusBlocks.TINTED_BEVELED_GLASS
         );
 
-//        TerraformBoatClientHelper.registerModelLayers(Blockus.id("raw_bamboo"), true);
-//        TerraformBoatClientHelper.registerModelLayers(Blockus.id("charred"), false);
-//        TerraformBoatClientHelper.registerModelLayers(Blockus.id("white_oak"), false);
+       TerraformBoatClientHelper.registerModelLayers(BlockusEntities.WHITE_OAK_BOATS_ID);
+       TerraformBoatClientHelper.registerModelLayers(BlockusEntities.CHARRED_BOATS_ID);
+       TerraformBoatClientHelper.registerModelLayers(BlockusEntities.RAW_BAMBOO_RAFTS_ID);
 
 
         /*if (FabricLoader.getInstance().isModLoaded("promenade")) {

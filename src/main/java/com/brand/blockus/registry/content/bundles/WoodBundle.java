@@ -1,12 +1,19 @@
 package com.brand.blockus.registry.content.bundles;
 
+import com.brand.blockus.Blockus;
 import com.brand.blockus.registry.content.BlockusItems;
 import com.brand.blockus.utils.BlockFactory;
+import com.terraformersmc.terraform.sign.api.block.TerraformHangingSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
+import net.minecraft.item.HangingSignItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.SignItem;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
 
@@ -38,15 +45,13 @@ public class WoodBundle {
         this.burnable = burnable;
 
         AbstractBlock.Settings blockSettings = BlockFactory.create().mapColor(color).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(sound);
-        AbstractBlock.Settings blockSettings2 = BlockFactory.createDoorTrapdoorBlockSettings(0.1f, 0.8f, sound, color, NoteBlockInstrument.BASS);
-        AbstractBlock.Settings signSettings = BlockFactory.create().mapColor(color).noCollision().strength(1.0F).sounds(sound);
-        AbstractBlock.Settings hangingSignSettings = BlockFactory.create().mapColor(color).noCollision().strength(1.0F).sounds(sound);
+        AbstractBlock.Settings doorTrapdoorSettings = BlockFactory.createDoorTrapdoorBlockSettings(0.1f, 0.8f, sound, color, NoteBlockInstrument.BASS);
+        AbstractBlock.Settings signSettings = BlockFactory.create().mapColor(color).noCollision().strength(1.0F);
 
         if (burnable) {
             blockSettings = blockSettings.burnable();
-            blockSettings2 = blockSettings2.burnable();
+            doorTrapdoorSettings = doorTrapdoorSettings.burnable();
             signSettings = signSettings.burnable();
-            hangingSignSettings = hangingSignSettings.burnable();
         }
 
         this.planks = BlockFactory.register(type + "_planks", blockSettings);
@@ -54,30 +59,22 @@ public class WoodBundle {
         this.slab = BlockFactory.registerSlab(this.planks);
         this.fence = BlockFactory.register(type + "_fence", FenceBlock::new, BlockFactory.createCopy(base));
         this.fence_gate = BlockFactory.register(type + "_fence_gate", (settings) -> new FenceGateBlock(woodtype, settings), BlockFactory.createCopy(base));
-        this.door = BlockFactory.register(type + "_door", (settings) -> new DoorBlock(blocksettype, settings), blockSettings2);
-        this.trapdoor = BlockFactory.register(type + "_trapdoor", (settings) -> new TrapdoorBlock(blocksettype, settings), blockSettings2);
+        this.door = BlockFactory.register(type + "_door", (settings) -> new DoorBlock(blocksettype, settings), doorTrapdoorSettings);
+        this.trapdoor = BlockFactory.register(type + "_trapdoor", (settings) -> new TrapdoorBlock(blocksettype, settings), doorTrapdoorSettings);
         this.pressure_plate = BlockFactory.woodenPressurePlate(this.planks);
         this.button = BlockFactory.register(type + "_button", (settings) -> new ButtonBlock(blocksettype, 30, settings), AbstractBlock.Settings.copy(planks).noCollision());
 
         // sign
-//        Identifier signPath = Blockus.id("entity/signs/" + type);
-//        this.standing_sign = BlockFactory.registerNoItem(type + "_sign", new TerraformSignBlock(signPath, signSettings));
-//        this.wall_sign = BlockFactory.registerNoItem(type + "_wall_sign", new TerraformWallSignBlock(signPath, copyLootTable(standing_sign).mapColor(color).noCollision().strength(1.0F).sounds(sound)));
-//        this.sign = BlockusItems.registerSign(standing_sign, wall_sign);
-//
-//        Identifier hangingSignPath = Blockus.id("entity/signs/hanging/" + type);
-//        Identifier hangingSignGuiPath = Blockus.id("textures/gui/hanging_signs/" + type);
-//        this.ceiling_hanging_sign = BlockFactory.registerNoItem(type + "_hanging_sign", new TerraformHangingSignBlock(hangingSignPath, hangingSignGuiPath, signSettings));
-//        this.wall_hanging_sign = BlockFactory.registerNoItem(type + "_wall_hanging_sign", new TerraformWallHangingSignBlock(hangingSignPath, hangingSignGuiPath, copyLootTable(ceiling_hanging_sign).mapColor(color).noCollision().strength(1.0F).sounds(sound)));
-//        this.hanging_sign = BlockusItems.registerHangingSign(ceiling_hanging_sign, wall_hanging_sign);
-
-        this.standing_sign = BlockFactory.registerNoItem(type + "_sign", Block::new, blockSettings);
-        this.wall_sign = BlockFactory.registerNoItem(type + "_wall_sign", Block::new, blockSettings);
+        Identifier signPath = Blockus.id("entity/signs/" + type);
+        this.standing_sign = BlockFactory.registerNoItem(type + "_sign", (settings) -> new TerraformSignBlock(signPath, settings), signSettings);
+        this.wall_sign = BlockFactory.registerNoItem(type + "_wall_sign", (settings) -> new TerraformWallSignBlock(signPath, settings), copyLootTable(standing_sign, color, burnable));
         this.sign = BlockusItems.register(this.standing_sign, (block, settings) -> new SignItem(block, this.wall_sign, settings), (new Item.Settings()).maxCount(16));
-        this.ceiling_hanging_sign = BlockFactory.registerNoItem(type + "_hanging_sign", Block::new, blockSettings);
-        this.wall_hanging_sign = BlockFactory.registerNoItem(type + "_wall_hanging_sign", Block::new, blockSettings);
-        this.hanging_sign = BlockusItems.register(this.ceiling_hanging_sign, (block, settings) -> new SignItem(block, this.wall_hanging_sign, settings), (new Item.Settings()).maxCount(16));
 
+        Identifier hangingSignPath = Blockus.id("entity/signs/hanging/" + type);
+        Identifier hangingSignGuiPath = Blockus.id("textures/gui/hanging_signs/" + type);
+        this.ceiling_hanging_sign = BlockFactory.registerNoItem(type + "_hanging_sign", (settings) -> new TerraformHangingSignBlock(hangingSignPath, hangingSignGuiPath, settings), signSettings);
+        this.wall_hanging_sign = BlockFactory.registerNoItem(type + "_wall_hanging_sign", (settings) -> new TerraformWallHangingSignBlock(hangingSignPath, hangingSignGuiPath, woodtype, settings), copyLootTable(ceiling_hanging_sign, color, burnable));
+        this.hanging_sign = BlockusItems.register(this.ceiling_hanging_sign, (block, settings) -> new HangingSignItem(block, this.wall_hanging_sign, settings), (new Item.Settings()).maxCount(16));
 
         LIST.add(this);
 
@@ -95,11 +92,13 @@ public class WoodBundle {
         this(type, base, color, sound, net.minecraft.block.WoodType.OAK, BlockSetType.OAK, burnable);
     }
 
-    public static AbstractBlock.Settings copyLootTable(Block block) {
-        AbstractBlock.Settings settings2 = BlockFactory.create().lootTable(block.getLootTableKey()).overrideTranslationKey(block.getTranslationKey());
-        return settings2;
+    public static AbstractBlock.Settings copyLootTable(Block block, MapColor color, boolean burnable) {
+        AbstractBlock.Settings settings = AbstractBlock.Settings.create().lootTable(block.getLootTableKey()).overrideTranslationKey(block.getTranslationKey()).mapColor(color).solid().instrument(NoteBlockInstrument.BASS).noCollision().strength(1.0F);
+        if (burnable) {
+            settings = settings.burnable();
+        }
+        return settings;
     }
-
     public static ArrayList<WoodBundle> values() {
         return LIST;
     }

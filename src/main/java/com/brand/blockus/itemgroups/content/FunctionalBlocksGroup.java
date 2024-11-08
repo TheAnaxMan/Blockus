@@ -1,8 +1,7 @@
 package com.brand.blockus.itemgroups.content;
 
 import com.brand.blockus.itemgroups.BlockusItemGroups;
-import com.brand.blockus.registry.content.bundles.BSSWBundle;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
+import com.brand.blockus.registry.content.BlockusEntities;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 
 import static com.brand.blockus.registry.content.BlockusBlocks.*;
@@ -60,21 +59,12 @@ public class FunctionalBlocksGroup {
             entries.add(WHITE_OAK.hanging_sign);
             entries.add(CHARRED.hanging_sign);
             entries.add(RAW_BAMBOO.hanging_sign);
-//            entries.add(BlockusEntities.WHITE_OAK_BOAT.getItem());
-//            entries.add(BlockusEntities.CHARRED_BOAT.getItem());
-//            entries.add(BlockusEntities.RAW_BAMBOO_RAFT.getItem());
-//            entries.add(BlockusEntities.WHITE_OAK_BOAT.getChestItem());
-//            entries.add(BlockusEntities.CHARRED_BOAT.getChestItem());
-//            entries.add(BlockusEntities.RAW_BAMBOO_RAFT.getChestItem());
+            entries.add(BlockusEntities.WHITE_OAK_BOAT);
+            entries.add(BlockusEntities.WHITE_OAK_CHEST_BOAT);
+            entries.add(BlockusEntities.CHARRED_BOAT);
+            entries.add(BlockusEntities.CHARRED_CHEST_BOAT);
+            entries.add(BlockusEntities.RAW_BAMBOO_RAFT);
+            entries.add(BlockusEntities.RAW_BAMBOO_CHEST_RAFT);
         });
-    }
-
-    public static void addBSSW(FabricItemGroupEntries entries, BSSWBundle BSSWBundle) {
-        entries.add(BSSWBundle.block);
-        entries.add(BSSWBundle.stairs);
-        entries.add(BSSWBundle.slab);
-        if (BSSWBundle.wall != null) {
-            entries.add(BSSWBundle.wall);
-        }
     }
 }

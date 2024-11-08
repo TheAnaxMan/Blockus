@@ -1,5 +1,6 @@
 package com.brand.blockus.datagen.providers;
 
+import com.brand.blockus.registry.content.BlockusEntities;
 import com.brand.blockus.registry.content.bundles.BSSWBundle;
 import com.brand.blockus.registry.tag.BlockusBlockTags;
 import com.brand.blockus.registry.tag.BlockusItemTags;
@@ -39,15 +40,15 @@ public class BlockusItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         this.copy(BlockusBlockTags.BARRIERS, BlockusItemTags.BARRIERS);
 
-//        this.getOrCreateTagBuilder(ItemTags.BOATS)
-//                .add(BlockusEntities.RAW_BAMBOO_RAFT.getItem())
-//                .add(BlockusEntities.CHARRED_BOAT.getItem())
-//                .add(BlockusEntities.WHITE_OAK_BOAT.getItem());
-//
-//        this.getOrCreateTagBuilder(ItemTags.CHEST_BOATS)
-//                .add(BlockusEntities.RAW_BAMBOO_RAFT.getChestItem())
-//                .add(BlockusEntities.CHARRED_BOAT.getChestItem())
-//                .add(BlockusEntities.WHITE_OAK_BOAT.getChestItem());
+        this.getOrCreateTagBuilder(ItemTags.BOATS)
+                .add(BlockusEntities.RAW_BAMBOO_RAFT)
+                .add(BlockusEntities.CHARRED_BOAT)
+                .add(BlockusEntities.WHITE_OAK_BOAT);
+
+        this.getOrCreateTagBuilder(ItemTags.CHEST_BOATS)
+                .add(BlockusEntities.RAW_BAMBOO_CHEST_RAFT)
+                .add(BlockusEntities.CHARRED_CHEST_BOAT)
+                .add(BlockusEntities.WHITE_OAK_CHEST_BOAT);
 
         this.getOrCreateTagBuilder(ItemTags.SIGNS)
             .add(RAW_BAMBOO.sign)
