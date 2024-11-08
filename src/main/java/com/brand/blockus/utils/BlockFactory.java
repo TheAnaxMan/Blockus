@@ -177,7 +177,7 @@ public class BlockFactory {
     }
 
     public static Block neonBlock(String id, DyeColor color) {
-        return register(id, create().mapColor(color).luminance((state) -> 3).sounds(BlockSoundGroup.GLASS).strength(0.5f, 0.5f).emissiveLighting(BlockFactory::always).allowsSpawning(BlockFactory::never));
+        return register(id, create().mapColor(color).luminance((state) -> 2).sounds(BlockSoundGroup.GLASS).strength(0.5f, 0.5f).emissiveLighting(BlockFactory::always).allowsSpawning(BlockFactory::never));
     }
 
     public static Block redstoneLamp(String id, MapColor mapColor) {
