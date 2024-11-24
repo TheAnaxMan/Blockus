@@ -41,14 +41,14 @@ public class BlockusItemTagProvider extends FabricTagProvider.ItemTagProvider {
         this.copy(BlockusBlockTags.BARRIERS, BlockusItemTags.BARRIERS);
 
         this.getOrCreateTagBuilder(ItemTags.BOATS)
-                .add(BlockusEntities.RAW_BAMBOO_RAFT)
-                .add(BlockusEntities.CHARRED_BOAT)
-                .add(BlockusEntities.WHITE_OAK_BOAT);
+            .add(BlockusEntities.RAW_BAMBOO_RAFT)
+            .add(BlockusEntities.CHARRED_BOAT)
+            .add(BlockusEntities.WHITE_OAK_BOAT);
 
         this.getOrCreateTagBuilder(ItemTags.CHEST_BOATS)
-                .add(BlockusEntities.RAW_BAMBOO_CHEST_RAFT)
-                .add(BlockusEntities.CHARRED_CHEST_BOAT)
-                .add(BlockusEntities.WHITE_OAK_CHEST_BOAT);
+            .add(BlockusEntities.RAW_BAMBOO_CHEST_RAFT)
+            .add(BlockusEntities.CHARRED_CHEST_BOAT)
+            .add(BlockusEntities.WHITE_OAK_CHEST_BOAT);
 
         this.getOrCreateTagBuilder(ItemTags.SIGNS)
             .add(RAW_BAMBOO.sign)
@@ -160,7 +160,7 @@ public class BlockusItemTagProvider extends FabricTagProvider.ItemTagProvider {
             .add(STONE_DOOR.asItem())
             .add(BLACKSTONE_DOOR.asItem());
 
-        this.copy(BlockTags.FLOWERS, ItemTags.FLOWERS);
+        this.copy(BlockTags.BEE_ATTRACTIVE, ItemTags.BEE_FOOD);
 
         this.getOrCreateTagBuilder(BlockusItemTags.NATURAL_ICE)
             .add(Items.ICE)

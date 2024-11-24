@@ -85,8 +85,8 @@ public class LargeFlowerPotBlock extends Block {
         }
     }
 
-    public ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state) {
-        return this.isEmpty() ? super.getPickStack(world, pos, state) : new ItemStack(this.content);
+    protected ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state, boolean includeData) {
+        return this.isEmpty() ? super.getPickStack(world, pos, state, includeData) : new ItemStack(this.content);
     }
 
     private boolean isEmpty() {

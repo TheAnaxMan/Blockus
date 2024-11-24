@@ -896,9 +896,6 @@ public class BlockusBlockTagProvider extends FabricTagProvider.BlockTagProvider 
             .add(POTTED_LEGACY_ROSE)
             .add(POTTED_LEGACY_BLUE_ROSE);
 
-        this.getOrCreateTagBuilder(BlockTags.FLOWERS)
-            .add(FLOWERING_AZALEA_SMALL_HEDGE);
-
         this.getOrCreateTagBuilder(BlockTags.GUARDED_BY_PIGLINS)
             .add(LEGACY_GOLD_BLOCK)
             .add(LEGACY_EXPLOSION_PROOF_GOLD_BLOCK)
@@ -991,10 +988,20 @@ public class BlockusBlockTagProvider extends FabricTagProvider.BlockTagProvider 
         this.getOrCreateTagBuilder(BlockTags.SAPLINGS)
             .add(WHITE_OAK_SAPLING);
 
+        this.getOrCreateTagBuilder(BlockTags.FLOWERS)
+            .add(FLOWERING_AZALEA_SMALL_HEDGE);
+
         this.getOrCreateTagBuilder(BlockTags.SMALL_FLOWERS)
             .add(RAINBOW_ROSE)
             .add(LEGACY_ROSE)
             .add(LEGACY_BLUE_ROSE);
+
+        this.getOrCreateTagBuilder(BlockTags.BEE_ATTRACTIVE)
+            .add(RAINBOW_ROSE)
+            .add(LEGACY_ROSE)
+            .add(LEGACY_BLUE_ROSE)
+            .add(FLOWERING_AZALEA_SMALL_HEDGE);
+
 
         this.getOrCreateTagBuilder(BlockTags.SOUL_FIRE_BASE_BLOCKS)
             .addTag(BlockusBlockTags.SOUL_SANDSTONE)

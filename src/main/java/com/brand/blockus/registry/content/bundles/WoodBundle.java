@@ -99,6 +99,7 @@ public class WoodBundle {
         }
         return settings;
     }
+
     public static ArrayList<WoodBundle> values() {
         return LIST;
     }

@@ -11,7 +11,6 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.color.block.BlockColorProvider;
-import net.minecraft.client.color.item.ItemColorProvider;
 import net.minecraft.client.render.RenderLayer;
 
 public class BlockusClient implements ClientModInitializer {
@@ -149,9 +148,9 @@ public class BlockusClient implements ClientModInitializer {
             BlockusBlocks.TINTED_BEVELED_GLASS
         );
 
-       TerraformBoatClientHelper.registerModelLayers(BlockusEntities.WHITE_OAK_BOATS_ID);
-       TerraformBoatClientHelper.registerModelLayers(BlockusEntities.CHARRED_BOATS_ID);
-       TerraformBoatClientHelper.registerModelLayers(BlockusEntities.RAW_BAMBOO_RAFTS_ID);
+        TerraformBoatClientHelper.registerModelLayers(BlockusEntities.WHITE_OAK_BOATS_ID);
+        TerraformBoatClientHelper.registerModelLayers(BlockusEntities.CHARRED_BOATS_ID);
+        TerraformBoatClientHelper.registerModelLayers(BlockusEntities.RAW_BAMBOO_RAFTS_ID);
 
 
         /*if (FabricLoader.getInstance().isModLoaded("promenade")) {
@@ -164,11 +163,6 @@ public class BlockusClient implements ClientModInitializer {
             BlockColorProvider provider = ColorProviderRegistry.BLOCK.get(templateBlock);
             return provider == null ? -1 : provider.getColor(block1, pos, world, layer);
         }, block);
-
-        ColorProviderRegistry.ITEM.register((item, layer) -> {
-            ItemColorProvider provider = ColorProviderRegistry.ITEM.get(templateBlock);
-            return provider == null ? -1 : provider.getColor(item, layer);
-        }, block.asItem());
     }
 }
 

@@ -6,13 +6,16 @@ import com.brand.blockus.datagen.family.BlockusFamilies;
 import com.brand.blockus.datagen.models.BlockusModels;
 import com.brand.blockus.datagen.models.BlockusTextureKey;
 import com.brand.blockus.registry.content.BlockusBlocks;
+import com.brand.blockus.registry.content.BlockusEntities;
 import com.brand.blockus.registry.content.bundles.*;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.client.*;
-import net.minecraft.data.client.VariantSettings.Rotation;
+import net.minecraft.client.data.*;
+import net.minecraft.client.data.VariantSettings.Rotation;
 import net.minecraft.data.family.BlockFamily;
 import net.minecraft.item.Item;
 import net.minecraft.state.property.Properties;
@@ -68,7 +71,7 @@ public class BlockusModelProvider extends FabricModelProvider {
             modelGenerator.registerSimpleCubeAll(timberFrameBundle.block);
             modelGenerator.registerSimpleCubeAll(timberFrameBundle.cross);
             this.registerDiagonalTimberFrame(modelGenerator, timberFrameBundle.diagonal);
-            modelGenerator.registerGlassPane(timberFrameBundle.grate, timberFrameBundle.lattice);
+            modelGenerator.registerGlassAndPane(timberFrameBundle.grate, timberFrameBundle.lattice);
         }
 
         for (AsphaltBundle asphaltBundle : AsphaltBundle.values()) {
@@ -295,7 +298,7 @@ public class BlockusModelProvider extends FabricModelProvider {
         modelGenerator.registerFlowerbed(BlockusBlocks.RAINBOW_PETALS);
         this.registerUpDefaultFacingBlock(modelGenerator, BlockusBlocks.RAINBOW_BLOCK);
         this.registerTopBottomFacingBottom(modelGenerator, BlockusBlocks.RAINBOW_ASPHALT);
-        modelGenerator.registerFlowerPotPlant(BlockusBlocks.RAINBOW_ROSE, BlockusBlocks.POTTED_RAINBOW_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        registerFlowerPotPlantAndItem(modelGenerator, BlockusBlocks.RAINBOW_ROSE, BlockusBlocks.POTTED_RAINBOW_ROSE, CrossType.NOT_TINTED);
 
         // Purpur Blocks
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.CHISELED_PURPUR);
@@ -322,7 +325,7 @@ public class BlockusModelProvider extends FabricModelProvider {
         modelGenerator.registerLog(BlockusBlocks.WHITE_OAK_LOG).log(BlockusBlocks.WHITE_OAK_LOG).wood(BlockusBlocks.WHITE_OAK_WOOD);
         modelGenerator.registerSingleton(BlockusBlocks.WHITE_OAK_LEAVES, TexturedModel.LEAVES);
         modelGenerator.registerLog(BlockusBlocks.STRIPPED_WHITE_OAK_LOG).log(BlockusBlocks.STRIPPED_WHITE_OAK_LOG).wood(BlockusBlocks.STRIPPED_WHITE_OAK_WOOD);
-        modelGenerator.registerFlowerPotPlant(BlockusBlocks.WHITE_OAK_SAPLING, BlockusBlocks.POTTED_WHITE_OAK_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        registerFlowerPotPlantAndItem(modelGenerator, BlockusBlocks.WHITE_OAK_SAPLING, BlockusBlocks.POTTED_WHITE_OAK_SAPLING, CrossType.NOT_TINTED);
 
         // Hanging Signs
         modelGenerator.registerHangingSign(BlockusBlocks.WHITE_OAK_LOG, BlockusBlocks.WHITE_OAK.ceiling_hanging_sign, BlockusBlocks.WHITE_OAK.wall_hanging_sign);
@@ -365,13 +368,13 @@ public class BlockusModelProvider extends FabricModelProvider {
         }
 
         // Small Hedges
-        this.registerSmallHedge(modelGenerator, BlockusBlocks.OAK_SMALL_HEDGE, Blocks.OAK_LEAVES);
-        this.registerSmallHedge(modelGenerator, BlockusBlocks.SPRUCE_SMALL_HEDGE, Blocks.SPRUCE_LEAVES);
-        this.registerSmallHedge(modelGenerator, BlockusBlocks.BIRCH_SMALL_HEDGE, Blocks.BIRCH_LEAVES);
-        this.registerSmallHedge(modelGenerator, BlockusBlocks.JUNGLE_SMALL_HEDGE, Blocks.JUNGLE_LEAVES);
-        this.registerSmallHedge(modelGenerator, BlockusBlocks.ACACIA_SMALL_HEDGE, Blocks.ACACIA_LEAVES);
-        this.registerSmallHedge(modelGenerator, BlockusBlocks.DARK_OAK_SMALL_HEDGE, Blocks.DARK_OAK_LEAVES);
-        this.registerSmallHedge(modelGenerator, BlockusBlocks.MANGROVE_SMALL_HEDGE, Blocks.MANGROVE_LEAVES);
+        this.registerSmallHedge(modelGenerator, BlockusBlocks.OAK_SMALL_HEDGE, Blocks.OAK_LEAVES, -12012264);
+        this.registerSmallHedge(modelGenerator, BlockusBlocks.SPRUCE_SMALL_HEDGE, Blocks.SPRUCE_LEAVES, -10380959);
+        this.registerSmallHedge(modelGenerator, BlockusBlocks.BIRCH_SMALL_HEDGE, Blocks.BIRCH_LEAVES, -8345771);
+        this.registerSmallHedge(modelGenerator, BlockusBlocks.JUNGLE_SMALL_HEDGE, Blocks.JUNGLE_LEAVES, -12012264);
+        this.registerSmallHedge(modelGenerator, BlockusBlocks.ACACIA_SMALL_HEDGE, Blocks.ACACIA_LEAVES, -12012264);
+        this.registerSmallHedge(modelGenerator, BlockusBlocks.DARK_OAK_SMALL_HEDGE, Blocks.DARK_OAK_LEAVES, -12012264);
+        this.registerSmallHedge(modelGenerator, BlockusBlocks.MANGROVE_SMALL_HEDGE, Blocks.MANGROVE_LEAVES, -7158200);
         this.registerSmallHedge(modelGenerator, BlockusBlocks.CHERRY_SMALL_HEDGE, Blocks.CHERRY_LEAVES);
         this.registerSmallHedge(modelGenerator, BlockusBlocks.WARPED_SMALL_HEDGE, Blocks.WARPED_WART_BLOCK);
         this.registerSmallHedge(modelGenerator, BlockusBlocks.CRIMSON_SMALL_HEDGE, Blocks.NETHER_WART_BLOCK);
@@ -458,7 +461,7 @@ public class BlockusModelProvider extends FabricModelProvider {
 
         // Glass - Beveled Glass
         this.registerBeveledGlassPane(modelGenerator, BlockusBlocks.RAINBOW_BEVELED_GLASS, BlockusBlocks.RAINBOW_BEVELED_GLASS_PANE);
-        modelGenerator.registerGlassPane(BlockusBlocks.RAINBOW_GLASS, BlockusBlocks.RAINBOW_GLASS_PANE);
+        modelGenerator.registerGlassAndPane(BlockusBlocks.RAINBOW_GLASS, BlockusBlocks.RAINBOW_GLASS_PANE);
         this.registerBeveledGlassPane(modelGenerator, BlockusBlocks.BEVELED_GLASS, BlockusBlocks.BEVELED_GLASS_PANE);
         this.registerBeveledGlassPane(modelGenerator, BlockusBlocks.BLACK_BEVELED_GLASS, BlockusBlocks.BLACK_BEVELED_GLASS_PANE);
         this.registerBeveledGlassPane(modelGenerator, BlockusBlocks.BLUE_BEVELED_GLASS, BlockusBlocks.BLUE_BEVELED_GLASS_PANE);
@@ -498,7 +501,7 @@ public class BlockusModelProvider extends FabricModelProvider {
 
         // Paper
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.BURNT_PAPER_BLOCK);
-        modelGenerator.registerGlassPane(BlockusBlocks.FRAMED_PAPER_BLOCK, BlockusBlocks.PAPER_WALL);
+        modelGenerator.registerGlassAndPane(BlockusBlocks.FRAMED_PAPER_BLOCK, BlockusBlocks.PAPER_WALL);
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.PAPER_BLOCK);
         modelGenerator.registerOrientableTrapdoor(BlockusBlocks.PAPER_TRAPDOOR);
         modelGenerator.registerDoor(BlockusBlocks.PAPER_DOOR);
@@ -516,7 +519,7 @@ public class BlockusModelProvider extends FabricModelProvider {
         // Legacy
         this.registerLegacyStonecutter(modelGenerator, BlockusBlocks.LEGACY_STONECUTTER);
         modelGenerator.registerSingleton(BlockusBlocks.LEGACY_LEAVES, TexturedModel.LEAVES);
-        modelGenerator.registerFlowerPotPlant(BlockusBlocks.LEGACY_SAPLING, BlockusBlocks.POTTED_LEGACY_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        registerFlowerPotPlantAndItem(modelGenerator, BlockusBlocks.LEGACY_SAPLING, BlockusBlocks.POTTED_LEGACY_SAPLING, CrossType.NOT_TINTED);
         this.registerAxisRotatedCubeColumn(modelGenerator, BlockusBlocks.LEGACY_LOG);
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.LEGACY_NETHER_REACTOR_CORE);
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.LEGACY_PLANKS);
@@ -537,8 +540,8 @@ public class BlockusModelProvider extends FabricModelProvider {
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.LEGACY_CRYING_OBSIDIAN);
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.LEGACY_GLOWING_OBSIDIAN);
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.LEGACY_GLOWSTONE);
-        modelGenerator.registerFlowerPotPlant(BlockusBlocks.LEGACY_ROSE, BlockusBlocks.POTTED_LEGACY_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        modelGenerator.registerFlowerPotPlant(BlockusBlocks.LEGACY_BLUE_ROSE, BlockusBlocks.POTTED_LEGACY_BLUE_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        registerFlowerPotPlantAndItem(modelGenerator, BlockusBlocks.LEGACY_ROSE, BlockusBlocks.POTTED_LEGACY_ROSE, CrossType.NOT_TINTED);
+        registerFlowerPotPlantAndItem(modelGenerator, BlockusBlocks.LEGACY_BLUE_ROSE, BlockusBlocks.POTTED_LEGACY_BLUE_ROSE, CrossType.NOT_TINTED);
 
         // Colored Tiles
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.RAINBOW_COLORED_TILES);
@@ -574,10 +577,28 @@ public class BlockusModelProvider extends FabricModelProvider {
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.STARS_BLOCK);
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.SUGAR_BLOCK);
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.WEIGHT_STORAGE_CUBE);
+        modelGenerator.registerItemModel(BlockusBlocks.GOLDEN_CHAIN.asItem());
+        modelGenerator.registerItemModel(BlockusBlocks.GOLDEN_BARS);
+        modelGenerator.registerItemModel(BlockusBlocks.WOODEN_FRAME);
+        modelGenerator.registerItemModel(BlockusBlocks.IRON_GATE.asItem());
+        modelGenerator.registerItemModel(BlockusBlocks.GOLDEN_GATE.asItem());
+        registerInventoryItemModel(modelGenerator, BlockusBlocks.CAUTION_BARRIER);
+        registerInventoryItemModel(modelGenerator, BlockusBlocks.ROAD_BARRIER);
+        modelGenerator.registerParentedItemModel(BlockusBlocks.PATH, ModelIds.getBlockSubModelId(BlockusBlocks.PATH, "4"));
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator modelGenerator) {
+        modelGenerator.register(BlockusEntities.CHARRED_BOAT.asItem(), Models.GENERATED);
+        modelGenerator.register(BlockusEntities.CHARRED_CHEST_BOAT.asItem(), Models.GENERATED);
+        modelGenerator.register(BlockusEntities.RAW_BAMBOO_RAFT.asItem(), Models.GENERATED);
+        modelGenerator.register(BlockusEntities.RAW_BAMBOO_CHEST_RAFT.asItem(), Models.GENERATED);
+        modelGenerator.register(BlockusEntities.WHITE_OAK_BOAT.asItem(), Models.GENERATED);
+        modelGenerator.register(BlockusEntities.WHITE_OAK_CHEST_BOAT.asItem(), Models.GENERATED);
+    }
+
+    public final void registerInventoryItemModel(BlockStateModelGenerator modelGenerator, Block block) {
+        modelGenerator.registerParentedItemModel(block, ModelIds.getBlockSubModelId(block, "_inventory"));
     }
 
     public final void registerPillar(BlockStateModelGenerator modelGenerator, Block block) {
@@ -674,14 +695,26 @@ public class BlockusModelProvider extends FabricModelProvider {
             .register(15, BlockStateVariant.create().put(VariantSettings.MODEL, identifier4))));
     }
 
-    public final void registerSmallHedge(BlockStateModelGenerator modelGenerator, Block wallBlock, Block textureSource) {
+    public final void registerSmallHedge(BlockStateModelGenerator modelGenerator, Block hedgeBlock, Block textureSource) {
+        registerSmallHedge(modelGenerator, hedgeBlock, textureSource, false, 0);
+    }
+
+    public final void registerSmallHedge(BlockStateModelGenerator modelGenerator, Block hedgeBlock, Block textureSource, int tintColor) {
+        registerSmallHedge(modelGenerator, hedgeBlock, textureSource, true, tintColor);
+    }
+
+    private void registerSmallHedge(BlockStateModelGenerator modelGenerator, Block hedgeBlock, Block textureSource, boolean isTinted, int tintColor) {
         TextureMap textureMap = TextureMap.of(BlockusTextureKey.HEDGE, TextureMap.getId(textureSource));
-        Identifier identifier = BlockusModels.TEMPLATE_SMALL_HEDGE_END.upload(wallBlock, textureMap, modelGenerator.modelCollector);
-        Identifier identifier2 = BlockusModels.TEMPLATE_SMALL_HEDGE_SIDE.upload(wallBlock, textureMap, modelGenerator.modelCollector);
-        Identifier identifier3 = BlockusModels.TEMPLATE_SMALL_HEDGE_SIDE_TALL.upload(wallBlock, textureMap, modelGenerator.modelCollector);
-        modelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createWallBlockState(wallBlock, identifier, identifier2, identifier3));
-        Identifier identifier4 = BlockusModels.TEMPLATE_SMALL_HEDGE_INVENTORY.upload(wallBlock, textureMap, modelGenerator.modelCollector);
-        modelGenerator.registerParentedItemModel(wallBlock, identifier4);
+        Identifier identifier = BlockusModels.TEMPLATE_SMALL_HEDGE_END.upload(hedgeBlock, textureMap, modelGenerator.modelCollector);
+        Identifier identifier2 = BlockusModels.TEMPLATE_SMALL_HEDGE_SIDE.upload(hedgeBlock, textureMap, modelGenerator.modelCollector);
+        Identifier identifier3 = BlockusModels.TEMPLATE_SMALL_HEDGE_SIDE_TALL.upload(hedgeBlock, textureMap, modelGenerator.modelCollector);
+        modelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createWallBlockState(hedgeBlock, identifier, identifier2, identifier3));
+        Identifier identifier4 = BlockusModels.TEMPLATE_SMALL_HEDGE_INVENTORY.upload(hedgeBlock, textureMap, modelGenerator.modelCollector);
+        if (isTinted) {
+            modelGenerator.registerTintedItemModel(hedgeBlock, identifier4, ItemModels.constantTintSource(tintColor));
+        } else {
+            modelGenerator.registerParentedItemModel(hedgeBlock, identifier4);
+        }
     }
 
     public final void registerCarpet(BlockStateModelGenerator modelGenerator, Block wool, Block carpet) {
@@ -864,9 +897,9 @@ public class BlockusModelProvider extends FabricModelProvider {
         Models.CUBE.upload(block, textureMap, modelGenerator.modelCollector);
         modelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(BlockStateVariantMap.create(Properties.HORIZONTAL_FACING)
             .register(Direction.NORTH, BlockStateVariant.create().put(VariantSettings.MODEL, identifier))
-            .register(Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.MODEL, identifier).put(VariantSettings.Y, VariantSettings.Rotation.R180))
-            .register(Direction.WEST, BlockStateVariant.create().put(VariantSettings.MODEL, identifier).put(VariantSettings.Y, VariantSettings.Rotation.R270))
-            .register(Direction.EAST, BlockStateVariant.create().put(VariantSettings.MODEL, identifier).put(VariantSettings.Y, VariantSettings.Rotation.R90))));
+            .register(Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.MODEL, identifier).put(VariantSettings.Y, Rotation.R180))
+            .register(Direction.WEST, BlockStateVariant.create().put(VariantSettings.MODEL, identifier).put(VariantSettings.Y, Rotation.R270))
+            .register(Direction.EAST, BlockStateVariant.create().put(VariantSettings.MODEL, identifier).put(VariantSettings.Y, Rotation.R90))));
     }
 
     public final void registerBeveledGlassPane(BlockStateModelGenerator modelGenerator, Block glass, Block glassPane) {
@@ -878,8 +911,8 @@ public class BlockusModelProvider extends FabricModelProvider {
         Identifier identifier4 = Models.TEMPLATE_GLASS_PANE_NOSIDE.upload(glassPane, textureMap, modelGenerator.modelCollector);
         Identifier identifier5 = Models.TEMPLATE_GLASS_PANE_NOSIDE_ALT.upload(glassPane, textureMap, modelGenerator.modelCollector);
         Item item = glassPane.asItem();
-        Models.GENERATED.upload(ModelIds.getItemModelId(item), TextureMap.layer0(glass), modelGenerator.modelCollector);
-        modelGenerator.blockStateCollector.accept(MultipartBlockStateSupplier.create(glassPane).with(BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).with(When.create().set(Properties.NORTH, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier2)).with(When.create().set(Properties.EAST, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier2).put(VariantSettings.Y, VariantSettings.Rotation.R90)).with(When.create().set(Properties.SOUTH, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier3)).with(When.create().set(Properties.WEST, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier3).put(VariantSettings.Y, VariantSettings.Rotation.R90)).with(When.create().set(Properties.NORTH, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier4)).with(When.create().set(Properties.EAST, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier5)).with(When.create().set(Properties.SOUTH, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier5).put(VariantSettings.Y, VariantSettings.Rotation.R90)).with(When.create().set(Properties.WEST, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier4).put(VariantSettings.Y, VariantSettings.Rotation.R270)));
+        modelGenerator.registerItemModel(item, modelGenerator.uploadBlockItemModel(item, glass));
+        modelGenerator.blockStateCollector.accept(MultipartBlockStateSupplier.create(glassPane).with(BlockStateVariant.create().put(VariantSettings.MODEL, identifier)).with(When.create().set(Properties.NORTH, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier2)).with(When.create().set(Properties.EAST, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier2).put(VariantSettings.Y, Rotation.R90)).with(When.create().set(Properties.SOUTH, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier3)).with(When.create().set(Properties.WEST, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier3).put(VariantSettings.Y, Rotation.R90)).with(When.create().set(Properties.NORTH, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier4)).with(When.create().set(Properties.EAST, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier5)).with(When.create().set(Properties.SOUTH, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier5).put(VariantSettings.Y, Rotation.R90)).with(When.create().set(Properties.WEST, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier4).put(VariantSettings.Y, Rotation.R270)));
     }
 
     public static void registerColoredTiles(BlockStateModelGenerator modelGenerator, Block block, Block tile1, Block tile2) {
@@ -930,12 +963,12 @@ public class BlockusModelProvider extends FabricModelProvider {
 
     public static BlockStateVariantMap createUpDefaultRotationStates() {
         return BlockStateVariantMap.create(Properties.FACING)
-            .register(Direction.DOWN, BlockStateVariant.create().put(VariantSettings.X, VariantSettings.Rotation.R180))
+            .register(Direction.DOWN, BlockStateVariant.create().put(VariantSettings.X, Rotation.R180))
             .register(Direction.UP, BlockStateVariant.create())
-            .register(Direction.NORTH, BlockStateVariant.create().put(VariantSettings.X, VariantSettings.Rotation.R270).put(VariantSettings.Y, VariantSettings.Rotation.R180))
-            .register(Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.X, VariantSettings.Rotation.R270))
-            .register(Direction.WEST, BlockStateVariant.create().put(VariantSettings.X, VariantSettings.Rotation.R270).put(VariantSettings.Y, VariantSettings.Rotation.R90))
-            .register(Direction.EAST, BlockStateVariant.create().put(VariantSettings.X, VariantSettings.Rotation.R270).put(VariantSettings.Y, VariantSettings.Rotation.R270));
+            .register(Direction.NORTH, BlockStateVariant.create().put(VariantSettings.X, Rotation.R270).put(VariantSettings.Y, Rotation.R180))
+            .register(Direction.SOUTH, BlockStateVariant.create().put(VariantSettings.X, Rotation.R270))
+            .register(Direction.WEST, BlockStateVariant.create().put(VariantSettings.X, Rotation.R270).put(VariantSettings.Y, Rotation.R90))
+            .register(Direction.EAST, BlockStateVariant.create().put(VariantSettings.X, Rotation.R270).put(VariantSettings.Y, Rotation.R270));
     }
 
     public static Identifier getTilesId(Block block) {
@@ -978,5 +1011,76 @@ public class BlockusModelProvider extends FabricModelProvider {
 
     public static TextureMap frontTopSideBottom(Block block) {
         return (new TextureMap()).put(TextureKey.FRONT, TextureMap.getId(block)).put(TextureKey.TOP, TextureMap.getSubId(block, "_top")).put(TextureKey.SIDE, TextureMap.getSubId(block, "_side")).put(TextureKey.BOTTOM, TextureMap.getSubId(block, "_side"));
+    }
+
+    // Tint
+    public final void registerTintableCross(BlockStateModelGenerator modelGenerator, Block block, CrossType crossType) {
+        modelGenerator.registerItemModel(block.asItem(), crossType.registerItemModel(modelGenerator, block));
+        this.registerTintableCrossBlockState(modelGenerator, block, crossType);
+    }
+
+    public final void registerTintableCross(BlockStateModelGenerator modelGenerator, Block block, CrossType tintType, TextureMap texture) {
+        modelGenerator.registerItemModel(block);
+        this.registerTintableCrossBlockState(modelGenerator, block, tintType, texture);
+    }
+
+    public final void registerTintableCrossBlockState(BlockStateModelGenerator modelGenerator, Block block, CrossType tintType) {
+        TextureMap textureMap = tintType.getTextureMap(block);
+        this.registerTintableCrossBlockState(modelGenerator, block, tintType, textureMap);
+    }
+
+    public final void registerTintableCrossBlockState(BlockStateModelGenerator modelGenerator, Block block, CrossType tintType, TextureMap crossTexture) {
+        Identifier identifier = Models.CROSS.upload(block, crossTexture, modelGenerator.modelCollector);
+        modelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(block, identifier));
+    }
+
+    public final void registerFlowerPotPlantAndItem(BlockStateModelGenerator modelGenerator, Block block, Block flowerPotBlock, CrossType crossType) {
+        modelGenerator.registerItemModel(block.asItem(), crossType.registerItemModel(modelGenerator, block));
+        this.registerFlowerPotPlant(modelGenerator, block, flowerPotBlock, crossType);
+    }
+
+    public final void registerFlowerPotPlant(BlockStateModelGenerator modelGenerator, Block plantBlock, Block flowerPotBlock, CrossType tintType) {
+        this.registerTintableCrossBlockState(modelGenerator, plantBlock, tintType);
+        TextureMap textureMap = tintType.getFlowerPotTextureMap(plantBlock);
+        Identifier identifier = tintType.getFlowerPotCrossModel().upload(flowerPotBlock, textureMap, modelGenerator.modelCollector);
+        modelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(flowerPotBlock, identifier));
+    }
+
+    @Environment(EnvType.CLIENT)
+    enum CrossType {
+        TINTED(Models.TINTED_CROSS, Models.TINTED_FLOWER_POT_CROSS, false),
+        NOT_TINTED(Models.CROSS, Models.FLOWER_POT_CROSS, false),
+        EMISSIVE_NOT_TINTED(Models.CROSS_EMISSIVE, Models.FLOWER_POT_CROSS_EMISSIVE, true);
+
+        private final Model model;
+        private final Model flowerPotModel;
+        private final boolean emissive;
+
+        CrossType(final Model model, final Model flowerPotModel, final boolean emissive) {
+            this.model = model;
+            this.flowerPotModel = flowerPotModel;
+            this.emissive = emissive;
+        }
+
+        public Model getCrossModel() {
+            return this.model;
+        }
+
+        public Model getFlowerPotCrossModel() {
+            return this.flowerPotModel;
+        }
+
+        public Identifier registerItemModel(BlockStateModelGenerator modelGenerator, Block block) {
+            Item item = block.asItem();
+            return this.emissive ? modelGenerator.uploadTwoLayerBlockItemModel(item, block, "_emissive") : modelGenerator.uploadBlockItemModel(item, block);
+        }
+
+        public TextureMap getTextureMap(Block block) {
+            return this.emissive ? TextureMap.crossAndCrossEmissive(block) : TextureMap.cross(block);
+        }
+
+        public TextureMap getFlowerPotTextureMap(Block block) {
+            return this.emissive ? TextureMap.plantAndCrossEmissive(block) : TextureMap.plant(block);
+        }
     }
 }
