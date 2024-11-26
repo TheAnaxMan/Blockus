@@ -132,6 +132,8 @@ public class Instance {
         FlammableBlockRegistry.getDefaultInstance().add(HERRINGBONE_MANGROVE_PLANKS, 5, 20);
         FlammableBlockRegistry.getDefaultInstance().add(HERRINGBONE_WHITE_OAK_PLANKS, 5, 20);
         FlammableBlockRegistry.getDefaultInstance().add(HERRINGBONE_BAMBOO_PLANKS, 5, 20);
+        FlammableBlockRegistry.getDefaultInstance().add(HERRINGBONE_PALE_OAK_PLANKS, 5, 20);
+
 
         // Small logs
         FlammableBlockRegistry.getDefaultInstance().add(OAK_SMALL_LOGS, 5, 5);
@@ -142,6 +144,7 @@ public class Instance {
         FlammableBlockRegistry.getDefaultInstance().add(DARK_OAK_SMALL_LOGS, 5, 5);
         FlammableBlockRegistry.getDefaultInstance().add(MANGROVE_SMALL_LOGS, 5, 5);
         FlammableBlockRegistry.getDefaultInstance().add(WHITE_OAK_SMALL_LOGS, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(PALE_OAK_SMALL_LOGS, 5, 5);
 
         // Posts
         for (WoodenPostBundle woodenPost : WoodenPostBundle.values()) {

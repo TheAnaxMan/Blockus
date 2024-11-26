@@ -5,8 +5,8 @@ import java.util.stream.Stream;
 
 public class BlockChecker {
 
-    public static final List<String> FLAMMABLE_WOODS = List.of("oak", "spruce", "birch", "jungle", "acacia", "dark_oak", "cherry", "mangrove", "bamboo", "raw_bamboo", "white_oak");
-    public static final List<String> NON_FLAMMABLE_WOODS = List.of("warped", "crimson", "charred");
+    public static final List<String> FLAMMABLE_WOODS = List.of("oak", "spruce", "birch", "jungle", "acacia", "dark_oak", "mangrove", "cherry", "pale_oak", "bamboo", "raw_bamboo", "white_oak");
+    public static final List<String> NON_FLAMMABLE_WOODS = List.of("crimson", "warped", "charred");
     public static final List<String> WOODS = Stream.concat(FLAMMABLE_WOODS.stream(), NON_FLAMMABLE_WOODS.stream()).toList();
 
     public static boolean isWoodenMosaic(String type, List<String> types) {

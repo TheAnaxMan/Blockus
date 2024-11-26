@@ -360,13 +360,15 @@ public class BlockusBlocks extends BlockFactory {
     public static final BSSWBundle JUNGLE_MOSAIC = new BSSWBundle("jungle_mosaic", Blocks.JUNGLE_PLANKS, false);
     public static final BSSWBundle ACACIA_MOSAIC = new BSSWBundle("acacia_mosaic", Blocks.ACACIA_PLANKS, false);
     public static final BSSWBundle DARK_OAK_MOSAIC = new BSSWBundle("dark_oak_mosaic", Blocks.DARK_OAK_PLANKS, false);
-    public static final BSSWBundle CHERRY_MOSAIC = new BSSWBundle("cherry_mosaic", Blocks.CHERRY_PLANKS, false);
     public static final BSSWBundle MANGROVE_MOSAIC = new BSSWBundle("mangrove_mosaic", Blocks.MANGROVE_PLANKS, false);
+    public static final BSSWBundle CHERRY_MOSAIC = new BSSWBundle("cherry_mosaic", Blocks.CHERRY_PLANKS, false);
+    public static final BSSWBundle PALE_OAK_MOSAIC = new BSSWBundle("pale_oak_mosaic", Blocks.PALE_OAK_PLANKS, false);
     public static final BSSWBundle RAW_BAMBOO_MOSAIC = new BSSWBundle("raw_bamboo_mosaic", RAW_BAMBOO.planks, false);
     public static final BSSWBundle WHITE_OAK_MOSAIC = new BSSWBundle("white_oak_mosaic", WHITE_OAK.planks, false);
-    public static final BSSWBundle WARPED_MOSAIC = new BSSWBundle("warped_mosaic", Blocks.WARPED_PLANKS, false);
     public static final BSSWBundle CRIMSON_MOSAIC = new BSSWBundle("crimson_mosaic", Blocks.CRIMSON_PLANKS, false);
+    public static final BSSWBundle WARPED_MOSAIC = new BSSWBundle("warped_mosaic", Blocks.WARPED_PLANKS, false);
     public static final BSSWBundle CHARRED_MOSAIC = new BSSWBundle("charred_mosaic", CHARRED.planks, false);
+
 
     // Mossy Planks
     public static final BSSWBundle MOSSY_OAK_PLANKS = new BSSWBundle("mossy_oak_planks", Blocks.OAK_PLANKS, false);
@@ -375,13 +377,14 @@ public class BlockusBlocks extends BlockFactory {
     public static final BSSWBundle MOSSY_JUNGLE_PLANKS = new BSSWBundle("mossy_jungle_planks", Blocks.JUNGLE_PLANKS, false);
     public static final BSSWBundle MOSSY_ACACIA_PLANKS = new BSSWBundle("mossy_acacia_planks", Blocks.ACACIA_PLANKS, false);
     public static final BSSWBundle MOSSY_DARK_OAK_PLANKS = new BSSWBundle("mossy_dark_oak_planks", Blocks.DARK_OAK_PLANKS, false);
-    public static final BSSWBundle MOSSY_CHERRY_PLANKS = new BSSWBundle("mossy_cherry_planks", Blocks.CHERRY_PLANKS, false);
     public static final BSSWBundle MOSSY_MANGROVE_PLANKS = new BSSWBundle("mossy_mangrove_planks", Blocks.MANGROVE_PLANKS, false);
+    public static final BSSWBundle MOSSY_CHERRY_PLANKS = new BSSWBundle("mossy_cherry_planks", Blocks.CHERRY_PLANKS, false);
+    public static final BSSWBundle MOSSY_PALE_OAK_PLANKS = new BSSWBundle("mossy_pale_oak_planks", Blocks.PALE_OAK_PLANKS, false);
     public static final BSSWBundle MOSSY_BAMBOO_PLANKS = new BSSWBundle("mossy_bamboo_planks", Blocks.BAMBOO_PLANKS, false);
     public static final BSSWBundle MOSSY_RAW_BAMBOO_PLANKS = new BSSWBundle("mossy_raw_bamboo_planks", RAW_BAMBOO.planks, false);
     public static final BSSWBundle MOSSY_WHITE_OAK_PLANKS = new BSSWBundle("mossy_white_oak_planks", WHITE_OAK.planks, false);
-    public static final BSSWBundle MOSSY_WARPED_PLANKS = new BSSWBundle("mossy_warped_planks", Blocks.WARPED_PLANKS, false);
     public static final BSSWBundle MOSSY_CRIMSON_PLANKS = new BSSWBundle("mossy_crimson_planks", Blocks.CRIMSON_PLANKS, false);
+    public static final BSSWBundle MOSSY_WARPED_PLANKS = new BSSWBundle("mossy_warped_planks", Blocks.WARPED_PLANKS, false);
     public static final BSSWBundle MOSSY_CHARRED_PLANKS = new BSSWBundle("mossy_charred_planks", CHARRED.planks, false);
 
     // Herringbone Planks
@@ -391,13 +394,14 @@ public class BlockusBlocks extends BlockFactory {
     public static final Block HERRINGBONE_JUNGLE_PLANKS = register("herringbone_jungle_planks", createCopy(Blocks.JUNGLE_PLANKS));
     public static final Block HERRINGBONE_ACACIA_PLANKS = register("herringbone_acacia_planks", createCopy(Blocks.ACACIA_PLANKS));
     public static final Block HERRINGBONE_DARK_OAK_PLANKS = register("herringbone_dark_oak_planks", createCopy(Blocks.DARK_OAK_PLANKS));
-    public static final Block HERRINGBONE_CHERRY_PLANKS = register("herringbone_cherry_planks", createCopy(Blocks.CHERRY_PLANKS));
     public static final Block HERRINGBONE_MANGROVE_PLANKS = register("herringbone_mangrove_planks", createCopy(Blocks.MANGROVE_PLANKS));
+    public static final Block HERRINGBONE_CHERRY_PLANKS = register("herringbone_cherry_planks", createCopy(Blocks.CHERRY_PLANKS));
+    public static final Block HERRINGBONE_PALE_OAK_PLANKS = register("herringbone_pale_oak_planks", createCopy(Blocks.PALE_OAK_PLANKS));
     public static final Block HERRINGBONE_BAMBOO_PLANKS = register("herringbone_bamboo_planks", createCopy(Blocks.BAMBOO_PLANKS));
     public static final Block HERRINGBONE_RAW_BAMBOO_PLANKS = register("herringbone_raw_bamboo_planks", createCopy(RAW_BAMBOO.planks));
     public static final Block HERRINGBONE_WHITE_OAK_PLANKS = register("herringbone_white_oak_planks", createCopy(WHITE_OAK.planks));
-    public static final Block HERRINGBONE_WARPED_PLANKS = register("herringbone_warped_planks", createCopy(Blocks.WARPED_PLANKS));
     public static final Block HERRINGBONE_CRIMSON_PLANKS = register("herringbone_crimson_planks", createCopy(Blocks.CRIMSON_PLANKS));
+    public static final Block HERRINGBONE_WARPED_PLANKS = register("herringbone_warped_planks", createCopy(Blocks.WARPED_PLANKS));
     public static final Block HERRINGBONE_CHARRED_PLANKS = register("herringbone_charred_planks", createCopy(CHARRED.planks));
 
     // Small Logs
@@ -409,9 +413,10 @@ public class BlockusBlocks extends BlockFactory {
     public static final Block DARK_OAK_SMALL_LOGS = registerPillar2("dark_oak_small_logs", Blocks.DARK_OAK_LOG);
     public static final Block MANGROVE_SMALL_LOGS = registerPillar2("mangrove_small_logs", Blocks.MANGROVE_LOG);
     public static final Block CHERRY_SMALL_LOGS = registerPillar2("cherry_small_logs", Blocks.CHERRY_LOG);
-    public static final Block WARPED_SMALL_STEMS = registerPillar2("warped_small_stems", Blocks.WARPED_STEM);
-    public static final Block CRIMSON_SMALL_STEMS = registerPillar2("crimson_small_stems", Blocks.CRIMSON_STEM);
+    public static final Block PALE_OAK_SMALL_LOGS = registerPillar2("pale_oak_small_logs", Blocks.PALE_OAK_LOG);
     public static final Block WHITE_OAK_SMALL_LOGS = registerPillar2("white_oak_small_logs", WHITE_OAK_LOG);
+    public static final Block CRIMSON_SMALL_STEMS = registerPillar2("crimson_small_stems", Blocks.CRIMSON_STEM);
+    public static final Block WARPED_SMALL_STEMS = registerPillar2("warped_small_stems", Blocks.WARPED_STEM);
 
     // Posts
     public static final WoodenPostBundle OAK_POST = new WoodenPostBundle("oak_post", Blocks.OAK_LOG, Blocks.STRIPPED_OAK_LOG);
@@ -422,9 +427,10 @@ public class BlockusBlocks extends BlockFactory {
     public static final WoodenPostBundle DARK_OAK_POST = new WoodenPostBundle("dark_oak_post", Blocks.DARK_OAK_LOG, Blocks.STRIPPED_DARK_OAK_LOG);
     public static final WoodenPostBundle MANGROVE_POST = new WoodenPostBundle("mangrove_post", Blocks.MANGROVE_LOG, Blocks.STRIPPED_MANGROVE_LOG);
     public static final WoodenPostBundle CHERRY_POST = new WoodenPostBundle("cherry_post", Blocks.CHERRY_LOG, Blocks.STRIPPED_CHERRY_LOG);
-    public static final WoodenPostBundle WARPED_POST = new WoodenPostBundle("warped_post", Blocks.WARPED_STEM, Blocks.STRIPPED_WARPED_STEM, false);
-    public static final WoodenPostBundle CRIMSON_POST = new WoodenPostBundle("crimson_post", Blocks.CRIMSON_STEM, Blocks.STRIPPED_CRIMSON_STEM, false);
+    public static final WoodenPostBundle PALE_OAK_POST = new WoodenPostBundle("pale_oak_post", Blocks.PALE_OAK_LOG, Blocks.STRIPPED_PALE_OAK_LOG);
     public static final WoodenPostBundle WHITE_OAK_POST = new WoodenPostBundle("white_oak_post", WHITE_OAK_LOG, STRIPPED_WHITE_OAK_LOG, false);
+    public static final WoodenPostBundle CRIMSON_POST = new WoodenPostBundle("crimson_post", Blocks.CRIMSON_STEM, Blocks.STRIPPED_CRIMSON_STEM, false);
+    public static final WoodenPostBundle WARPED_POST = new WoodenPostBundle("warped_post", Blocks.WARPED_STEM, Blocks.STRIPPED_WARPED_STEM, false);
 
     // Timber Frames & Grates
     public static final TimberFrameBundle OAK_TIMBER_FRAME = new TimberFrameBundle(Blocks.OAK_PLANKS);
@@ -434,12 +440,13 @@ public class BlockusBlocks extends BlockFactory {
     public static final TimberFrameBundle ACACIA_TIMBER_FRAME = new TimberFrameBundle(Blocks.ACACIA_PLANKS);
     public static final TimberFrameBundle DARK_OAK_TIMBER_FRAME = new TimberFrameBundle(Blocks.DARK_OAK_PLANKS);
     public static final TimberFrameBundle MANGROVE_TIMBER_FRAME = new TimberFrameBundle(Blocks.MANGROVE_PLANKS);
-    public static final TimberFrameBundle BAMBOO_TIMBER_FRAME = new TimberFrameBundle(Blocks.BAMBOO_PLANKS);
     public static final TimberFrameBundle CHERRY_TIMBER_FRAME = new TimberFrameBundle(Blocks.CHERRY_PLANKS);
+    public static final TimberFrameBundle PALE_OAK_TIMBER_FRAME = new TimberFrameBundle(Blocks.PALE_OAK_PLANKS);
+    public static final TimberFrameBundle BAMBOO_TIMBER_FRAME = new TimberFrameBundle(Blocks.BAMBOO_PLANKS);
     public static final TimberFrameBundle RAW_BAMBOO_TIMBER_FRAME = new TimberFrameBundle(BlockusBlocks.RAW_BAMBOO.planks);
     public static final TimberFrameBundle WHITE_OAK_TIMBER_FRAME = new TimberFrameBundle(BlockusBlocks.WHITE_OAK.planks);
-    public static final TimberFrameBundle WARPED_TIMBER_FRAME = new TimberFrameBundle(Blocks.WARPED_PLANKS, false);
     public static final TimberFrameBundle CRIMSON_TIMBER_FRAME = new TimberFrameBundle(Blocks.CRIMSON_PLANKS, false);
+    public static final TimberFrameBundle WARPED_TIMBER_FRAME = new TimberFrameBundle(Blocks.WARPED_PLANKS, false);
     public static final TimberFrameBundle CHARRED_TIMBER_FRAME = new TimberFrameBundle(BlockusBlocks.CHARRED.planks, false);
     public static final Block WOODEN_FRAME = woodenPane("wooden_frame");
 

@@ -554,6 +554,7 @@ public class BlockusRecipeProvider extends FabricRecipeProvider {
                 offerSmallLogsRecipe(WARPED_SMALL_STEMS, Blocks.WARPED_STEM);
                 offerSmallLogsRecipe(CRIMSON_SMALL_STEMS, Blocks.CRIMSON_STEM);
                 offerSmallLogsRecipe(WHITE_OAK_SMALL_LOGS, WHITE_OAK_LOG);
+                offerSmallLogsRecipe(PALE_OAK_SMALL_LOGS, Blocks.PALE_OAK_LOG);
 
                 offerWoodenPostRecipe(OAK_POST, Blocks.OAK_PLANKS);
                 offerWoodenPostRecipe(SPRUCE_POST, Blocks.SPRUCE_PLANKS);
@@ -566,6 +567,8 @@ public class BlockusRecipeProvider extends FabricRecipeProvider {
                 offerWoodenPostRecipe(WARPED_POST, Blocks.WARPED_PLANKS);
                 offerWoodenPostRecipe(CRIMSON_POST, Blocks.CRIMSON_PLANKS);
                 offerWoodenPostRecipe(WHITE_OAK_POST, WHITE_OAK.planks);
+                offerWoodenPostRecipe(PALE_OAK_POST, Blocks.PALE_OAK_PLANKS);
+
 
                 for (BSSWBundle block : BSSWBundle.values()) {
                     if (BlockChecker.isMossyPlanks(block.type, BlockChecker.WOODS)) {
@@ -586,6 +589,7 @@ public class BlockusRecipeProvider extends FabricRecipeProvider {
                 offerMosaicRecipe(RecipeCategory.DECORATIONS, CRIMSON_MOSAIC.block, Blocks.CRIMSON_SLAB);
                 offerMosaicRecipe(RecipeCategory.DECORATIONS, WARPED_MOSAIC.block, Blocks.WARPED_SLAB);
                 offerMosaicRecipe(RecipeCategory.DECORATIONS, CHARRED_MOSAIC.block, CHARRED.slab);
+                offerMosaicRecipe(RecipeCategory.DECORATIONS, PALE_OAK_MOSAIC.block, Blocks.PALE_OAK_SLAB);
                 offerCharredSmeltingRecipe(BlockusItemTags.WOODEN_MOSAIC_THAT_BURN, CHARRED_MOSAIC.block, "mosaic");
 
                 offerHerringBoneRecipe(HERRINGBONE_OAK_PLANKS, Blocks.OAK_PLANKS);
@@ -602,6 +606,7 @@ public class BlockusRecipeProvider extends FabricRecipeProvider {
                 offerHerringBoneRecipe(HERRINGBONE_CRIMSON_PLANKS, Blocks.CRIMSON_PLANKS);
                 offerHerringBoneRecipe(HERRINGBONE_WARPED_PLANKS, Blocks.WARPED_PLANKS);
                 offerHerringBoneRecipe(HERRINGBONE_CHARRED_PLANKS, CHARRED.planks);
+                offerHerringBoneRecipe(HERRINGBONE_PALE_OAK_PLANKS, Blocks.PALE_OAK_PLANKS);
                 offerCharredSmeltingRecipe(BlockusItemTags.HERRINGBONE_PLANKS_THAT_BURN, HERRINGBONE_CHARRED_PLANKS, "herringbone_planks");
 
                 // Small Hedges

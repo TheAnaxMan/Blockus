@@ -688,7 +688,8 @@ public class BlockusBlockTagProvider extends FabricTagProvider.BlockTagProvider 
             .add(HERRINGBONE_CHERRY_PLANKS)
             .add(HERRINGBONE_BAMBOO_PLANKS)
             .add(HERRINGBONE_WHITE_OAK_PLANKS)
-            .add(HERRINGBONE_RAW_BAMBOO_PLANKS);
+            .add(HERRINGBONE_RAW_BAMBOO_PLANKS)
+            .add(HERRINGBONE_PALE_OAK_PLANKS);
 
         this.getOrCreateTagBuilder(Identifier.of("c", "bars"))
             .add(GOLDEN_BARS);
@@ -861,6 +862,9 @@ public class BlockusBlockTagProvider extends FabricTagProvider.BlockTagProvider 
             .add(POLISHED_SCULK_BUTTON)
             .add(VIRIDITE_BUTTON);
 
+        this.getOrCreateTagBuilder(BlockTags.PALE_OAK_LOGS)
+            .add(PALE_OAK_SMALL_LOGS);
+
         this.getOrCreateTagBuilder(BlockTags.CHERRY_LOGS)
             .add(CHERRY_SMALL_LOGS);
 
@@ -983,7 +987,8 @@ public class BlockusBlockTagProvider extends FabricTagProvider.BlockTagProvider 
             .add(HERRINGBONE_WHITE_OAK_PLANKS)
             .add(HERRINGBONE_CRIMSON_PLANKS)
             .add(HERRINGBONE_WARPED_PLANKS)
-            .add(HERRINGBONE_CHARRED_PLANKS);
+            .add(HERRINGBONE_CHARRED_PLANKS)
+            .add(HERRINGBONE_PALE_OAK_PLANKS);
 
         this.getOrCreateTagBuilder(BlockTags.SAPLINGS)
             .add(WHITE_OAK_SAPLING);

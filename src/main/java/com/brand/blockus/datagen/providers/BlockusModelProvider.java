@@ -353,6 +353,7 @@ public class BlockusModelProvider extends FabricModelProvider {
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.HERRINGBONE_WARPED_PLANKS);
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.HERRINGBONE_CHARRED_PLANKS);
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.HERRINGBONE_WHITE_OAK_PLANKS);
+        modelGenerator.registerSimpleCubeAll(BlockusBlocks.HERRINGBONE_PALE_OAK_PLANKS);
 
         // Small Logs
         this.registerAxisRotatedCubeColumn(modelGenerator, BlockusBlocks.ACACIA_SMALL_LOGS);
@@ -366,6 +367,7 @@ public class BlockusModelProvider extends FabricModelProvider {
         this.registerAxisRotatedCubeColumn(modelGenerator, BlockusBlocks.WHITE_OAK_SMALL_LOGS);
         this.registerAxisRotatedCubeColumn(modelGenerator, BlockusBlocks.CRIMSON_SMALL_STEMS);
         this.registerAxisRotatedCubeColumn(modelGenerator, BlockusBlocks.WARPED_SMALL_STEMS);
+        this.registerAxisRotatedCubeColumn(modelGenerator, BlockusBlocks.PALE_OAK_SMALL_LOGS);
 
         // Posts
         for (WoodenPostBundle woodenPost : WoodenPostBundle.values()) {

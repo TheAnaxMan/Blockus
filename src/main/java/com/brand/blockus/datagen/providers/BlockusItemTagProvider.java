@@ -118,7 +118,9 @@ public class BlockusItemTagProvider extends FabricTagProvider.ItemTagProvider {
             .add(HERRINGBONE_CHERRY_PLANKS.asItem())
             .add(HERRINGBONE_BAMBOO_PLANKS.asItem())
             .add(HERRINGBONE_RAW_BAMBOO_PLANKS.asItem())
-            .add(HERRINGBONE_WHITE_OAK_PLANKS.asItem());
+            .add(HERRINGBONE_WHITE_OAK_PLANKS.asItem())
+            .add(HERRINGBONE_PALE_OAK_PLANKS.asItem());
+
 
         for (BSSWBundle block : BSSWBundle.values()) {
             if (BlockChecker.isWoodenMosaic(block.type, BlockChecker.FLAMMABLE_WOODS)) {

@@ -205,6 +205,8 @@ public class BlockusLangEnProvider extends FabricLanguageProvider {
         translationBuilder.add(BlockusBlocks.WHITE_OAK_SMALL_LOGS, "Small White Oak Logs");
         translationBuilder.add(BlockusBlocks.CRIMSON_SMALL_STEMS, "Small Crimson Stems");
         translationBuilder.add(BlockusBlocks.WARPED_SMALL_STEMS, "Small Warped Stems");
+        translationBuilder.add(BlockusBlocks.PALE_OAK_SMALL_LOGS, "Small Pale Oak Logs");
+
 
         // Wooden Posts
         addWoodenPost(translationBuilder, BlockusBlocks.OAK_POST, "Oak Post");
@@ -218,6 +220,8 @@ public class BlockusLangEnProvider extends FabricLanguageProvider {
         addWoodenPost(translationBuilder, BlockusBlocks.WHITE_OAK_POST, "White Oak Post");
         addWoodenPost(translationBuilder, BlockusBlocks.CRIMSON_POST, "Crimson Post");
         addWoodenPost(translationBuilder, BlockusBlocks.WARPED_POST, "Warped Post");
+        addWoodenPost(translationBuilder, BlockusBlocks.PALE_OAK_POST, "Pale Oak Post");
+
 
         // Mosaics
         addBssw(translationBuilder, BlockusBlocks.RAW_BAMBOO_MOSAIC, "Raw Bamboo Mosaic");
@@ -233,6 +237,8 @@ public class BlockusLangEnProvider extends FabricLanguageProvider {
         addBssw(translationBuilder, BlockusBlocks.WARPED_MOSAIC, "Warped Mosaic");
         addBssw(translationBuilder, BlockusBlocks.CRIMSON_MOSAIC, "Crimson Mosaic");
         addBssw(translationBuilder, BlockusBlocks.CHARRED_MOSAIC, "Charred Mosaic");
+        addBssw(translationBuilder, BlockusBlocks.PALE_OAK_MOSAIC, "Pale Oak Mosaic");
+
 
         // Mossy Planks
         addBssw(translationBuilder, BlockusBlocks.MOSSY_OAK_PLANKS, "Mossy Oak Planks");
@@ -249,6 +255,7 @@ public class BlockusLangEnProvider extends FabricLanguageProvider {
         addWoodenBss(translationBuilder, BlockusBlocks.MOSSY_CHARRED_PLANKS, "Mossy Charred Planks");
         addBssw(translationBuilder, BlockusBlocks.MOSSY_CRIMSON_PLANKS, "Mossy Crimson Planks");
         addBssw(translationBuilder, BlockusBlocks.MOSSY_WARPED_PLANKS, "Mossy Warped Planks");
+        addBssw(translationBuilder, BlockusBlocks.MOSSY_PALE_OAK_PLANKS, "Mossy Pale Oak Planks");
 
         // Herringbone Planks
         translationBuilder.add(BlockusBlocks.HERRINGBONE_OAK_PLANKS, "Herringbone Oak Planks");
@@ -265,6 +272,7 @@ public class BlockusLangEnProvider extends FabricLanguageProvider {
         translationBuilder.add(BlockusBlocks.HERRINGBONE_CHARRED_PLANKS, "Herringbone Charred Planks");
         translationBuilder.add(BlockusBlocks.HERRINGBONE_CRIMSON_PLANKS, "Herringbone Crimson Planks");
         translationBuilder.add(BlockusBlocks.HERRINGBONE_WARPED_PLANKS, "Herringbone Warped Planks");
+        translationBuilder.add(BlockusBlocks.HERRINGBONE_PALE_OAK_PLANKS, "Herringbone Pale Oak Planks");
 
         // Timber Frames, Lattices & Wooden Grates
         addTimberFrame(translationBuilder, BlockusBlocks.OAK_TIMBER_FRAME, "Oak");
@@ -281,6 +289,7 @@ public class BlockusLangEnProvider extends FabricLanguageProvider {
         addTimberFrame(translationBuilder, BlockusBlocks.RAW_BAMBOO_TIMBER_FRAME, "Raw Bamboo");
         addTimberFrame(translationBuilder, BlockusBlocks.CRIMSON_TIMBER_FRAME, "Crimson");
         addTimberFrame(translationBuilder, BlockusBlocks.WARPED_TIMBER_FRAME, "Warped");
+        addTimberFrame(translationBuilder, BlockusBlocks.PALE_OAK_TIMBER_FRAME, "Pale Oak");
         translationBuilder.add(BlockusBlocks.WOODEN_FRAME, "Wooden Frame");
 
         // Netherrack

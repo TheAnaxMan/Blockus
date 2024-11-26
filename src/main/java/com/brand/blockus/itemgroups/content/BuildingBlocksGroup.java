@@ -6,6 +6,7 @@ import com.brand.blockus.utils.BlockChecker;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
+import net.minecraft.item.ItemGroups;
 
 import static com.brand.blockus.registry.content.BlockusBlocks.*;
 
@@ -38,6 +39,7 @@ public class BuildingBlocksGroup {
             entries.add(HERRINGBONE_DARK_OAK_PLANKS);
             entries.add(HERRINGBONE_MANGROVE_PLANKS);
             entries.add(HERRINGBONE_CHERRY_PLANKS);
+            entries.add(HERRINGBONE_PALE_OAK_PLANKS);
             entries.add(HERRINGBONE_BAMBOO_PLANKS);
             entries.add(HERRINGBONE_RAW_BAMBOO_PLANKS);
             entries.add(HERRINGBONE_WHITE_OAK_PLANKS);
@@ -69,6 +71,7 @@ public class BuildingBlocksGroup {
             entries.add(DARK_OAK_SMALL_LOGS);
             entries.add(MANGROVE_SMALL_LOGS);
             entries.add(CHERRY_SMALL_LOGS);
+            entries.add(PALE_OAK_SMALL_LOGS);
             entries.add(WHITE_OAK_SMALL_LOGS);
             entries.add(CRIMSON_SMALL_STEMS);
             entries.add(WARPED_SMALL_STEMS);

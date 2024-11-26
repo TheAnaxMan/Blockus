@@ -144,6 +144,8 @@ public class BlockusBlockLootTableProvider extends FabricBlockLootTableProvider 
             HERRINGBONE_CRIMSON_PLANKS,
             HERRINGBONE_WARPED_PLANKS,
             HERRINGBONE_CHARRED_PLANKS,
+            HERRINGBONE_PALE_OAK_PLANKS,
+
 
             // Other
             LEGACY_LOG,
@@ -338,6 +340,7 @@ public class BlockusBlockLootTableProvider extends FabricBlockLootTableProvider 
             ORANGE_NEON,
             ORANGE_REDSTONE_LAMP,
             ORANGE_REDSTONE_LAMP_LIT,
+            PALE_OAK_SMALL_LOGS,
             PAPER_BLOCK,
             PAPER_LAMP,
             PAPER_TRAPDOOR,
