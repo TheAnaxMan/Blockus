@@ -456,6 +456,11 @@ public class BlockusBlockTagProvider extends FabricTagProvider.BlockTagProvider 
             .add(LAPIS_DECORATED_RED_SANDSTONE)
             .add(RED_SANDSTONE_PILLAR);
 
+        this.getOrCreateTagBuilder(BlockusBlockTags.RESIN_BLOCKS)
+            .add(bsswBundle(LARGE_RESIN_BRICKS))
+            .add(HERRINGBONE_RESIN_BRICKS)
+            .add(RESIN_BRICK_PILLAR);
+
         this.getOrCreateTagBuilder(BlockusBlockTags.SANDSTONE)
             .add(bsswBundle(ROUGH_SANDSTONE))
             .add(bsswBundle(SANDSTONE_BRICKS))

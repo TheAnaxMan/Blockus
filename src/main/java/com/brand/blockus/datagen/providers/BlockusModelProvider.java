@@ -283,6 +283,10 @@ public class BlockusModelProvider extends FabricModelProvider {
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.HERRINGBONE_CHARRED_BRICKS);
         modelGenerator.registerSimpleCubeAll(BlockusBlocks.HERRINGBONE_SANDY_BRICKS);
 
+        // Resin Bricks
+        modelGenerator.registerSimpleCubeAll(BlockusBlocks.HERRINGBONE_RESIN_BRICKS);
+        this.registerPillar(modelGenerator, BlockusBlocks.RESIN_BRICK_PILLAR);
+
         // Sandstone
         this.registerPillar(modelGenerator, BlockusBlocks.SANDSTONE_PILLAR);
         this.registerCubeColumn(modelGenerator, BlockusBlocks.GOLD_DECORATED_SANDSTONE, Blocks.SANDSTONE);

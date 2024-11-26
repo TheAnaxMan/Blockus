@@ -384,6 +384,12 @@ public class BlockusLangEnProvider extends FabricLanguageProvider {
         translationBuilder.add(BlockusBlocks.HERRINGBONE_BRICKS, "Herringbone Bricks");
         addBssw(translationBuilder, BlockusBlocks.HONEYCOMB_BRICKS, "Honeycomb Bricks");
 
+        // Resin Bricks
+        addBssw(translationBuilder, BlockusBlocks.LARGE_RESIN_BRICKS, "Large Resin Bricks");
+        translationBuilder.add(BlockusBlocks.HERRINGBONE_RESIN_BRICKS, "Herringbone Resin Bricks");
+        translationBuilder.add(BlockusBlocks.RESIN_BRICK_PILLAR, "Resin Brick Pillar");
+
+
         // Glass
         translationBuilder.add(BlockusBlocks.RAINBOW_GLASS, "Rainbow Glass");
         translationBuilder.add(BlockusBlocks.RAINBOW_GLASS_PANE, "Rainbow Glass Pane");

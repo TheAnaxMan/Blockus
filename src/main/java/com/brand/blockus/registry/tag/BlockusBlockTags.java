@@ -72,6 +72,7 @@ public class BlockusBlockTags {
     public static final TagKey<Block> ALL_WOODEN_MOSAICS = register("all_wooden_mosaics");
     public static final TagKey<Block> ALL_MOSSY_PLANKS = register("all_mossy_planks");
     public static final TagKey<Block> WOODEN_POSTS = register("wooden_posts");
+    public static final TagKey<Block> RESIN_BLOCKS = register("resin_blocks");
 
     private BlockusBlockTags() {
     }

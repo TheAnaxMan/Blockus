@@ -439,6 +439,12 @@ public class BlockusRecipeProvider extends FabricRecipeProvider {
                 offerStonecuttingRecipe(HERRINGBONE_CHARRED_BRICKS, CHARRED_BRICKS.block);
                 CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(Blocks.BRICKS), RecipeCategory.BUILDING_BLOCKS, CHARRED_BRICKS.block.asItem(), 0.1F, 200).criterion("has_bricks", conditionsFromItem(Blocks.BRICKS)).offerTo(exporter);
 
+                // Resin Bricks
+                offerBsswCuttingRecipe(LARGE_RESIN_BRICKS, Blocks.RESIN_BRICKS);
+                offerPolishedStoneRecipe(LARGE_RESIN_BRICKS.block, Blocks.RESIN_BRICKS);
+                offerStonecuttingRecipe(HERRINGBONE_RESIN_BRICKS, Blocks.RESIN_BRICKS);
+                offerStonecuttingRecipe(RESIN_BRICK_PILLAR, Blocks.RESIN_BRICKS);
+
                 // Sandstone
                 offerBsswCuttingRecipe(ROUGH_SANDSTONE);
                 createShaped(RecipeCategory.BUILDING_BLOCKS, ROUGH_SANDSTONE.block, 2).input('#', Blocks.SANDSTONE_SLAB).pattern("##").pattern("##").criterion("has_sandstone", conditionsFromItem(Blocks.SANDSTONE)).offerTo(exporter);

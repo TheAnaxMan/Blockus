@@ -267,6 +267,11 @@ public class BlockusBlocks extends BlockFactory {
     public static final BSSWBundle SANDY_BRICKS = new BSSWBundle("sandy_bricks", Blocks.BRICKS);
     public static final Block HERRINGBONE_SANDY_BRICKS = register("herringbone_sandy_bricks", createCopy(BlockusBlocks.SANDY_BRICKS.block));
 
+    // Resin Bricks
+    public static final BSSWBundle LARGE_RESIN_BRICKS = new BSSWBundle("large_resin_bricks", Blocks.RESIN_BRICKS);
+    public static final Block HERRINGBONE_RESIN_BRICKS = register("herringbone_resin_bricks", createCopy(Blocks.RESIN_BRICKS));
+    public static final Block RESIN_BRICK_PILLAR = registerPillar(Blocks.RESIN_BRICKS);
+
     // Sandstone
     public static final BSSWBundle ROUGH_SANDSTONE = new BSSWBundle("rough_sandstone", Blocks.SANDSTONE, false);
     public static final BSSWBundle SANDSTONE_BRICKS = new BSSWBundle("sandstone_bricks", Blocks.SANDSTONE);

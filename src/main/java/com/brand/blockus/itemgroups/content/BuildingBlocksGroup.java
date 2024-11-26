@@ -261,6 +261,10 @@ public class BuildingBlocksGroup {
             addBssw(entries, CHARRED_BRICKS);
             entries.add(HERRINGBONE_CHARRED_BRICKS);
 
+            addBssw(entries, LARGE_RESIN_BRICKS);
+            entries.add(HERRINGBONE_RESIN_BRICKS);
+            entries.add(RESIN_BRICK_PILLAR);
+
             addBssw(entries, ROUGH_SANDSTONE);
             addBssw(entries, SANDSTONE_BRICKS);
             addBssw(entries, SMALL_SANDSTONE_BRICKS);
