@@ -459,10 +459,12 @@ public class BlockusBlocks extends BlockFactory {
     public static final Block DARK_OAK_SMALL_HEDGE = smallHedge("dark_oak_small_hedge", Blocks.DARK_OAK_LEAVES);
     public static final Block MANGROVE_SMALL_HEDGE = smallHedge("mangrove_small_hedge", Blocks.MANGROVE_LEAVES);
     public static final Block CHERRY_SMALL_HEDGE = smallHedge("cherry_small_hedge", Blocks.CHERRY_LEAVES);
+    public static final Block PALE_OAK_SMALL_HEDGE = smallHedge("pale_oak_small_hedge", Blocks.PALE_OAK_LEAVES);
     public static final Block WHITE_OAK_SMALL_HEDGE = smallHedge("white_oak_small_hedge", WHITE_OAK_LEAVES);
     public static final Block AZALEA_SMALL_HEDGE = smallHedge("azalea_small_hedge", Blocks.AZALEA_LEAVES);
     public static final Block FLOWERING_AZALEA_SMALL_HEDGE = smallHedge("azalea_small_hedge_flowers", Blocks.FLOWERING_AZALEA_LEAVES);
     public static final Block MOSS_SMALL_HEDGE = smallHedge("moss_small_hedge", Blocks.MOSS_BLOCK);
+    public static final Block PALE_MOSS_SMALL_HEDGE = smallHedge("pale_moss_small_hedge", Blocks.PALE_MOSS_BLOCK);
     public static final Block CRIMSON_SMALL_HEDGE = smallHedge("crimson_small_hedge", Blocks.NETHER_WART_BLOCK);
     public static final Block WARPED_SMALL_HEDGE = smallHedge("warped_small_hedge", Blocks.WARPED_WART_BLOCK);
 
@@ -480,6 +482,7 @@ public class BlockusBlocks extends BlockFactory {
     public static final PottedLargeBundle POTTED_DARK_OAK = new PottedLargeBundle("potted_dark_oak", Blocks.DARK_OAK_SAPLING);
     public static final PottedLargeBundle POTTED_MANGROVE = new PottedLargeBundle("potted_mangrove", Blocks.MANGROVE_PROPAGULE);
     public static final PottedLargeBundle POTTED_CHERRY_BLOSSOM = new PottedLargeBundle("potted_cherry_blossom", Blocks.CHERRY_SAPLING);
+    public static final PottedLargeBundle POTTED_PALE_OAK = new PottedLargeBundle("potted_pale_oak", Blocks.PALE_OAK_SAPLING);
     public static final PottedLargeBundle POTTED_WHITE_OAK = new PottedLargeBundle("potted_white_oak", WHITE_OAK_SAPLING);
     public static final PottedLargeBundle POTTED_HUGE_RED_MUSHROOM = new PottedLargeBundle("potted_huge_red_mushroom", Blocks.RED_MUSHROOM);
     public static final PottedLargeBundle POTTED_HUGE_BROWN_MUSHROOM = new PottedLargeBundle("potted_huge_brown_mushroom", Blocks.BROWN_MUSHROOM);

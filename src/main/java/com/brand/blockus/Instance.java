@@ -165,6 +165,8 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(JUNGLE_SMALL_HEDGE, 0.30f);
         CompostingChanceRegistry.INSTANCE.add(SPRUCE_SMALL_HEDGE, 0.30f);
         CompostingChanceRegistry.INSTANCE.add(MANGROVE_SMALL_HEDGE, 0.30f);
+        CompostingChanceRegistry.INSTANCE.add(CHERRY_SMALL_HEDGE, 0.30f);
+        CompostingChanceRegistry.INSTANCE.add(PALE_OAK_SMALL_HEDGE, 0.30f);
         CompostingChanceRegistry.INSTANCE.add(AZALEA_SMALL_HEDGE, 0.30f);
         CompostingChanceRegistry.INSTANCE.add(WHITE_OAK_SMALL_HEDGE, 0.30f);
         CompostingChanceRegistry.INSTANCE.add(WHITE_OAK_LEAVES, 0.30f);
@@ -175,6 +177,7 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(SWEET_BERRIES_CRATE, 0.50f);
         CompostingChanceRegistry.INSTANCE.add(FLOWERING_AZALEA_SMALL_HEDGE, 0.50f);
         CompostingChanceRegistry.INSTANCE.add(MOSS_SMALL_HEDGE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(PALE_MOSS_SMALL_HEDGE, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(RAINBOW_ROSE, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(THATCH.slab, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(THATCH.block, 0.75f);

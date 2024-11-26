@@ -615,10 +615,12 @@ public class BlockusLangEnProvider extends FabricLanguageProvider {
         translationBuilder.add(BlockusBlocks.DARK_OAK_SMALL_HEDGE, "Dark Oak Small Hedge");
         translationBuilder.add(BlockusBlocks.MANGROVE_SMALL_HEDGE, "Mangrove Small Hedge");
         translationBuilder.add(BlockusBlocks.CHERRY_SMALL_HEDGE, "Cherry Small Hedge");
+        translationBuilder.add(BlockusBlocks.PALE_OAK_SMALL_HEDGE, "Pale Oak Small Hedge");
         translationBuilder.add(BlockusBlocks.WHITE_OAK_SMALL_HEDGE, "White Oak Small Hedge");
         translationBuilder.add(BlockusBlocks.AZALEA_SMALL_HEDGE, "Azalea Small Hedge");
         translationBuilder.add(BlockusBlocks.FLOWERING_AZALEA_SMALL_HEDGE, "Flowering Azalea Small Hedge");
         translationBuilder.add(BlockusBlocks.MOSS_SMALL_HEDGE, "Moss Small Hedge");
+        translationBuilder.add(BlockusBlocks.PALE_MOSS_SMALL_HEDGE, "Pale Moss Small Hedge");
         translationBuilder.add(BlockusBlocks.WARPED_SMALL_HEDGE, "Warped Small Hedge");
         translationBuilder.add(BlockusBlocks.CRIMSON_SMALL_HEDGE, "Crimson Small Hedge");
 
@@ -709,6 +711,7 @@ public class BlockusLangEnProvider extends FabricLanguageProvider {
         translationBuilder.add(BlockusBlocks.POTTED_DARK_OAK.block, "Potted Dark Oak");
         translationBuilder.add(BlockusBlocks.POTTED_MANGROVE.block, "Potted Mangrove");
         translationBuilder.add(BlockusBlocks.POTTED_CHERRY_BLOSSOM.block, "Potted Cherry Blossom");
+        translationBuilder.add(BlockusBlocks.POTTED_PALE_OAK.block, "Potted Pale Oak");
         translationBuilder.add(BlockusBlocks.POTTED_WHITE_OAK.block, "Potted White Oak");
         translationBuilder.add(BlockusBlocks.POTTED_HUGE_RED_MUSHROOM.block, "Potted Huge Red Mushroom");
         translationBuilder.add(BlockusBlocks.POTTED_HUGE_BROWN_MUSHROOM.block, "Potted Huge Brown Mushroom");

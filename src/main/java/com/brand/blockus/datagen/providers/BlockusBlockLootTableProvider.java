@@ -341,6 +341,7 @@ public class BlockusBlockLootTableProvider extends FabricBlockLootTableProvider 
             ORANGE_REDSTONE_LAMP,
             ORANGE_REDSTONE_LAMP_LIT,
             PALE_OAK_SMALL_LOGS,
+            PALE_MOSS_SMALL_HEDGE,
             PAPER_BLOCK,
             PAPER_LAMP,
             PAPER_TRAPDOOR,
@@ -495,6 +496,7 @@ public class BlockusBlockLootTableProvider extends FabricBlockLootTableProvider 
             SPRUCE_SMALL_HEDGE,
             MANGROVE_SMALL_HEDGE,
             CHERRY_SMALL_HEDGE,
+            PALE_OAK_SMALL_HEDGE,
             WHITE_OAK_SMALL_HEDGE);
 
         this.addDropsWithSilkTouch(BEVELED_GLASS,

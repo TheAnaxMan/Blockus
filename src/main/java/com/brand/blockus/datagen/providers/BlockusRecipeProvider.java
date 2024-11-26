@@ -618,12 +618,14 @@ public class BlockusRecipeProvider extends FabricRecipeProvider {
                 offerSmallHedgesRecipe(DARK_OAK_SMALL_HEDGE, Blocks.DARK_OAK_LEAVES);
                 offerSmallHedgesRecipe(MANGROVE_SMALL_HEDGE, Blocks.MANGROVE_LEAVES);
                 offerSmallHedgesRecipe(CHERRY_SMALL_HEDGE, Blocks.CHERRY_LEAVES);
+                offerSmallHedgesRecipe(PALE_OAK_SMALL_HEDGE, Blocks.PALE_OAK_LEAVES);
                 offerSmallHedgesRecipe(WARPED_SMALL_HEDGE, Blocks.WARPED_WART_BLOCK);
                 offerSmallHedgesRecipe(CRIMSON_SMALL_HEDGE, Blocks.NETHER_WART_BLOCK);
                 offerSmallHedgesRecipe(WHITE_OAK_SMALL_HEDGE, WHITE_OAK_LEAVES);
                 offerSmallHedgesRecipe(AZALEA_SMALL_HEDGE, Blocks.AZALEA_LEAVES);
                 offerSmallHedgesRecipe(FLOWERING_AZALEA_SMALL_HEDGE, Blocks.FLOWERING_AZALEA_LEAVES);
                 offerSmallHedgesRecipe(MOSS_SMALL_HEDGE, Blocks.MOSS_BLOCK);
+                offerSmallHedgesRecipe(PALE_MOSS_SMALL_HEDGE, Blocks.PALE_MOSS_BLOCK);
 
                 // Large Flower Pots
                 createShaped(RecipeCategory.BUILDING_BLOCKS, LARGE_FLOWER_POT).input('#', Items.BRICK).pattern("# #").pattern("###").pattern("###").criterion("has_flower_pot", conditionsFromItem(Items.FLOWER_POT)).offerTo(exporter);
